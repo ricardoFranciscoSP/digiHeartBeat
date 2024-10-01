@@ -1,8 +1,12 @@
+/* Estilos gerais */
 .bannercontainer {
     position: relative;
     width: 100%;
     height: 95vh; /* Ajuste conforme necessário */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .backgroundvideo {
@@ -17,7 +21,7 @@
 
 .bannerslider {
     width: 90%;
-    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -30,22 +34,14 @@
     align-items: center;
     text-align: center;
     color: #000; /* Ajuste conforme necessário */
-    height: 100%;
     padding: 20px;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1; /* Certifique-se de que o texto está acima do vídeo */
-    margin-top: 180px;
-    
 }
 
 .bannertitle {
     font-size: 2.5rem; /* Ajuste conforme necessário */
     margin-bottom: 1rem;
-    margin-top: 180px;
-    position: relative;
 }
 
 .bannerdescription {
@@ -64,4 +60,36 @@
 
 .slick-dots li button:before {
     color: #000; /* Ajuste conforme necessário */
+}
+
+/* Media queries para responsividade */
+
+/* Tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .bannercontent {
+        padding: 10px;
+    }
+
+    .bannertitle {
+        font-size: 2rem;
+    }
+
+    .bannerdescription {
+        font-size: 1rem;
+    }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 480px) {
+    .bannercontent {
+        padding: 5px;
+    }
+
+    .bannertitle {
+        font-size: 1.5rem;
+    }
+
+    .bannerdescription {
+        font-size: 0.875rem;
+    }
 }
