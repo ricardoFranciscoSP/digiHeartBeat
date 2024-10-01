@@ -3,12 +3,17 @@ import { client } from '../../lib/apollo';
 import Header from '../../components/Header';
 import BannersHome from '../../components/Banners';
 import styles from './home.module.css';
+import ScrollDownIcon from '../../components/ScrollDownIcon';
 
 export default function Home() {
   return (
     <div className={styles.container}>
        <Header />
        <BannersHome />
+       <ScrollDownIcon />
+       <div id="conteudo" className={styles.conteudo}>
+        {/* conteudo site */}
+       </div>
     </div>
   )
 }

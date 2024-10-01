@@ -2,7 +2,7 @@
 .bannercontainer {
     position: relative;
     width: 100%;
-    height: 95vh; /* Ajuste conforme necessário */
+    height: 75vh; /* Ajuste conforme necessário */
     overflow: hidden;
     display: flex;
     justify-content: center;
