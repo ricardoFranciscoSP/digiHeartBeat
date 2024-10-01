@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MADECarving';
-    src: url('/public/assets/fonts/MADECARVINGOutlinePersonalUse-Regular.otf') format('opentype');
+    src: url('/assets/fonts/MADECARVINGOutlinePersonalUse-Regular.otf') format('opentype');
   }
   
   .App {
