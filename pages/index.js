@@ -1,3 +1,4 @@
+// index.js
 import Head from 'next/head'; 
 import { client } from '../lib/apollo';
 import Header from '../components/Header';
@@ -22,7 +23,9 @@ export default function Home({ page }) {
          {page ? (
            <div dangerouslySetInnerHTML={{ __html: page.content }} />
          ) : (
-           <p>Carregando...</p>
+          <div className={styles.loadingContainer}>
+          <div className={styles.loadingSpinner}></div>
+        </div>
          )}
        </div>
     </div>

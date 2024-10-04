@@ -1,8 +1,8 @@
-/* Estilos gerais */
+/* banner.module.css */
 .bannercontainer {
     position: relative;
     width: 100%;
-    height: 75vh; /* Ajuste conforme necessário */
+    height: 80vh; /* Ajuste conforme necessário */
     overflow: hidden;
     display: flex;
     justify-content: center;

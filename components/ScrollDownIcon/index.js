@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+// ScrollDownIcon/index.js
 import styles from './ScrollDownIcon.module.css';
 
 export default function ScrollDownIcon() {

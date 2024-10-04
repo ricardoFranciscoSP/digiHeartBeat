@@ -3,8 +3,9 @@ import { ApolloProvider } from '@apollo/client';
 import { client } from '../lib/apollo';
 import { gql } from '@apollo/client';
 import { IdProvider } from '../context/idContext';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LoadingComponent from '../components/Loading';
+import { GET_PAGE_ID_BY_SLUG } from '../lib/queries';
 
 function MyApp({ Component, pageProps, id }) {
   const [animationEnded, setAnimationEnded] = useState(false);
@@ -12,14 +13,6 @@ function MyApp({ Component, pageProps, id }) {
   const handleAnimationEnd = () => {
     setAnimationEnded(true);
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimationEnded(true);
-    }, 5000); // Duração da animação de carregamento em milissegundos
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <ApolloProvider client={client}>
@@ -40,16 +33,6 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   
   // Pega o slug da URL
   const slug = ctx.query.slug || 'home'; // Default para 'home' se não houver slug
-
-  // Query GraphQL para buscar o ID da página com base no slug
-  const GET_PAGE_ID_BY_SLUG = gql`
-    query GetPageID($slug: String!) {
-      pageBy(uri: $slug) {
-        id
-        pageId
-      }
-    }
-  `;
 
   try {
     const { data } = await client.query({
