@@ -1,8 +1,8 @@
 
 function HomeApp({ Component, pageProps }) {
   return (
-        <Component {...pageProps} />
-    )
+    <Component {...pageProps} />
+  )
 }
 
 export default HomeApp

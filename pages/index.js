@@ -10,8 +10,7 @@ export default function App() {
   const handleAnimationEnd = () => {
     setAnimationEnded(true);
   };
-
-
+  
   return (
     <div className="App">
       { animationEnded ? <Home /> : <Loading onAnimationEnd={handleAnimationEnd}  />}    

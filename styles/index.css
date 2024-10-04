@@ -1,6 +1,7 @@
 
-
-
+@import url('http://digiheartbeatlocal.local/wp-content/plugins/elementor/assets/css/frontend.min.css');
+@import url('http://digiheartbeatlocal.local/wp-content/uploads/elementor/css/post-8.css');
+@import url('http://digiheartbeatlocal.local/wp-content/uploads/elementor/css/global.css');
 
 .scroll-icon {
     text-align: center;
