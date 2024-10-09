@@ -4,6 +4,7 @@
     width: 100%;
     min-height: 100vh; /* Garante que o container ocupe pelo menos a altura da tela */
     overflow-x: hidden; /* Remove a rolagem lateral */
+    height: auto;
 }
 
 .bannerContainer {
@@ -19,6 +20,8 @@
 .conteudo {
     width: 100%;
     padding: 20px; /* Ajuste conforme necessário */
+    display: flex;
+    height: auto;
 }
 
 .loadingContainer {

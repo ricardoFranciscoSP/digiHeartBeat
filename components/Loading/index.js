@@ -45,14 +45,14 @@ const LoadingComponent = ({ onAnimationEnd }) => {
         <video autoPlay loop muted className={styles.backgroundVideo}>
           <source src="/assets/animacao.mp4" type="video/mp4" />
         </video>
-        <div className={ styles.overlay }>
+        <div className={styles.overlay}>
           <motion.div
             className={styles.content}
             initial={{ opacity: 1 }}
             animate={{ opacity: fadeOut ? 0 : 1 }}
             transition={{ duration: 1 }}
           >
-            <div className={styles.column + ' ' +  styles.left }>
+            <div className={styles.column + ' ' + styles.left}>
               {showLogo && (
                 <motion.img
                   src="/assets/logo.png" // Coloque o caminho do seu logo
@@ -64,7 +64,7 @@ const LoadingComponent = ({ onAnimationEnd }) => {
                 />
               )}
             </div>
-            <div className={styles.column + ' ' +  styles.right}>
+            <div className={styles.column + ' ' + styles.right}>
               {showText && (
                 <div className={styles.text}>
                   {words.slice(0, currentWord).map((word, index) => (
