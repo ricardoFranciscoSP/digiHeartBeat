@@ -14,7 +14,7 @@
 }
 
 .logoImage {
-    max-width: 100px; /* Ajuste conforme necessário */
+    max-width: 150px; /* Ajuste conforme necessário */
     height: auto;
 }
 
@@ -27,7 +27,8 @@
 .headerLink {
     font-weight: bold;
     text-decoration: none;
-    color: #ccc;
+    color: #000;
+    font-size: 18px;
 }
 
 .headerA {

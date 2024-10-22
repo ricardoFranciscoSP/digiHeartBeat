@@ -22,7 +22,7 @@ const BannersHome = () => {
             <video autoPlay loop muted className={styles.backgroundvideo}>
                 <source src="/assets/animacao.mp4" type="video/mp4" />
             </video>
-            <Slider {...settings} className={styles.bannerslider}>
+            <div className={styles.bannerslider}>
                 <div className={styles.bannercontent}>
                     <h1 className={styles.bannertitle}>
                         Few companies can promisse that<br /> everything is Integrated.
@@ -34,25 +34,8 @@ const BannersHome = () => {
                         Data & AI | Digital Products | Technology 
                     </p>
                 </div>
-                <div className={styles.bannercontent}>
-                    <h1 className={styles.bannertitle}>
-                        Another headline<br /> with different content.
-                        <span className={styles.span}> Example 2</span>
-                    </h1>
-                    <p className={styles.bannerdescription}>
-                        Different content for<br /> the second slide.
-                    </p>
-                </div>
-                <div className={styles.bannercontent}>
-                    <h1 className={styles.bannertitle}>
-                        Yet another headline<br /> with more content.
-                        <span className={styles.span}> Example</span>
-                    </h1>
-                    <p className={styles.bannerdescription}>
-                        More content for<br /> the third slide.
-                    </p>
-                </div>
-            </Slider>
+                
+            </div>
         </div>
     );
 };

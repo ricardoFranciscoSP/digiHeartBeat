@@ -6,6 +6,8 @@ import BannersHome from '../components/Banners';
 import styles from './home.module.css';
 import ScrollDownIcon from '../components/ScrollDownIcon';
 import { GET_PAGE_BY_ID } from '../lib/queries';
+import Footer from '../components/footer';
+import PromoSection from '../components/PromoSection';
 
 export default function Home({ page }) {
   return (
@@ -28,6 +30,9 @@ export default function Home({ page }) {
         </div>
          )}
        </div>
+       <PromoSection />
+       <Footer />
+
     </div>
     </>
   )
