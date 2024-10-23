@@ -2,7 +2,7 @@
 .bannercontainer {
     position: relative;
     width: 100%;
-    height: 80vh; /* Ajuste conforme necessário */
+    height: 70vh; /* Ajuste conforme necessário */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -34,13 +34,13 @@
     align-items: center;
     text-align: center;
     color: #000; /* Ajuste conforme necessário */
-    padding: 20px;
+    padding: 30px;
     position: relative;
     z-index: 1; /* Certifique-se de que o texto está acima do vídeo */
 }
 
 .bannertitle {
-    font-size: 2.5rem; /* Ajuste conforme necessário */
+    font-size: 45px; /* Ajuste conforme necessário */
     margin-bottom: 1rem;
 }
 
@@ -49,7 +49,9 @@
 }
 
 .span {
-    color: #ffcc00; /* Ajuste conforme necessário */
+    color: #000; 
+    background-color:#B7D433;/* Ajuste conforme necessário */
+    padding: 2px;
 }
 
 /* Estilos para garantir que as setas e os pontos sejam visíveis */

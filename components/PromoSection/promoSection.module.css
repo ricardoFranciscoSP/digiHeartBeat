@@ -1,6 +1,6 @@
 /* Bloco Vermelho */
 .promoContent {
-  background: linear-gradient(to right, #b50000, #8b0000); /* Gradiente vermelho */
+  background: linear-gradient(to right, #B20000, #8b0000); /* Gradiente vermelho */
   padding: 40px 20px;
   text-align: center;
   color: #fff;
@@ -82,14 +82,18 @@
 .submitButton {
   padding: 10px;
   font-size: 16px;
-  color: #b50000;
+  color: #B20000;
   background-color: #fff;
-  border: 1px solid #b50000;
+  border: 1px solid #B20000;
   cursor: pointer;
   border-radius: 30px; /* Adiciona border-radius de 30px */
   align-self: flex-start; /* Alinha o botão à esquerda */
   width: 100px; /* Largura do botão */
   margin-top: 30px; /* Espaçamento superior */
+}
+
+.email {
+  width: 70%;
 }
 
 .checkboxContainer {
