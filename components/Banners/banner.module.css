@@ -1,4 +1,14 @@
 /* banner.module.css */
+@font-face {
+    font-family: 'isidora-regular';
+    src: url('/assets/fonts/Isidora-regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'isidora-light';
+    src: url('/assets/fonts/Isidora-Light.otf') format('opentype');
+  }
+
 .bannercontainer {
     position: relative;
     width: 100%;
@@ -40,12 +50,14 @@
 }
 
 .bannertitle {
-    font-size: 45px; /* Ajuste conforme necessário */
+    font-size: 50px; /* Ajuste conforme necessário */
     margin-bottom: 1rem;
+    font-family: 'isidora-regular';
 }
 
 .bannerdescription {
-    font-size: 1.25rem; /* Ajuste conforme necessário */
+    font-size: 34px; /* Ajuste conforme necessário */
+    font-family: 'isidora-light';
 }
 
 .span {

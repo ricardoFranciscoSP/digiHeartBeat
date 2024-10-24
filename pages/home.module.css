@@ -19,7 +19,6 @@
 
 .conteudo {
     width: 100%;
-    padding: 20px; /* Ajuste conforme necessário */
     display: flex;
     height: auto;
 }

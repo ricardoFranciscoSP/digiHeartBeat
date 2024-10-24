@@ -8,6 +8,7 @@ const Header = () => {
     const [menus, setMenus] = useState([]);
     const [showLanguageMenu, setShowLanguageMenu] = useState(false);
     const [language, setLanguage] = useState('EN');
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Controle do menu mobile
     const languageMenuRef = useRef(null);
 
     useEffect(() => {
@@ -47,20 +48,55 @@ const Header = () => {
         setShowLanguageMenu(false);
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header className={styles.header}>
-            <Link href="/" className={styles.logo}>
-                <img src="/assets/logo.png" alt="Logo" className={styles.logoImage} />
-            </Link>
-            <div className={styles.headerMenu}>
-                <nav className={styles.nav}>
-                    {menus && menus.map((menu, index) => (
-                        <Link key={index} className={styles.headerLink} href={menu.url}>
-                            {menu.label}
-                        </Link>
-                    ))}
-                </nav>
-                <span className={styles.separator}>|</span>
+            {/* Menu para desktop */}
+            <div className={styles.desktopHeader}>
+                <Link href="/" className={styles.logo}>
+                    <img src="/assets/logo.png" alt="Logo" className={styles.logoImage} />
+                </Link>
+                <div className={styles.headerMenu}>
+                    <nav className={styles.nav}>
+                        {menus && menus.map((menu, index) => (
+                            <Link key={index} className={styles.headerLink} href={menu.url}>
+                                {menu.label}
+                            </Link>
+                        ))}
+                    </nav>
+                    <span className={styles.separator}>|</span>
+                    <div className={styles.icons}>
+                        <i className={styles.searchIcon}><img src='/assets/search.png' alt='lupa' className={styles.lupa} /></i>
+                        <div 
+                            className={styles.languageIcon} 
+                            onMouseEnter={handleMouseEnter} 
+                            onMouseLeave={handleMouseLeave}
+                            ref={languageMenuRef}
+                        >
+                            {language}
+                            {showLanguageMenu && (
+                                <div className={styles.languageMenu}>
+                                    <div onClick={() => handleLanguageChange('EN')}>English</div>
+                                    <div onClick={() => handleLanguageChange('PT')}>Português</div>
+                                    <hr className={styles.languageSeparator} />
+                                    <div onClick={() => handleLanguageChange('ES')}>Español</div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Menu para mobile */}
+            <div className={styles.mobileHeader}>
+                <div className={styles.menuIcon} onClick={toggleMenu}>
+                    <img src="/assets/menu.png" alt="Menu" className={styles.imgIcon} />
+                </div>
+                <Link href="/" className={styles.logo}>
+                    <img src="/assets/logo.png" alt="Logo" className={styles.logoImageMobile} />
+                </Link>
                 <div className={styles.icons}>
                     <i className={styles.searchIcon}><img src='/assets/search.png' alt='lupa' className={styles.lupa} /></i>
                     <div 
@@ -80,6 +116,11 @@ const Header = () => {
                         )}
                     </div>
                 </div>
+                {isMenuOpen && (
+                    <nav className={styles.mobileNav}>
+                       
+                    </nav>
+                )}
             </div>
         </header>
     );

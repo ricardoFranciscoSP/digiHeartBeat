@@ -44,7 +44,7 @@
 }
 
 .signupText {
-  flex: 0 0 50%; /* 40% da largura */
+  flex: 0 0 50%; /* 50% da largura */
 }
 
 .signupText h2 {
@@ -116,6 +116,47 @@
   }
 
   .signupText {
+    flex: 0 0 100%; /* 100% da largura */
     margin-bottom: 20px;
+  }
+
+  .signupForm {
+    flex: 0 0 100%; /* 100% da largura */
+    align-items: center; /* Centraliza o formulário */
+  }
+
+  .signupForm label,
+  .signupForm input,
+  .submitButton {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .email {
+    width: 100%; /* Ocupa 100% da largura disponível */
+  }
+
+  .submitButton {
+    align-self: center; /* Centraliza o botão */
+  }
+
+  .promoContent {
+    padding: 20px 10px;
+  }
+
+  .promoContent h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .promoContent p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .promoButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 80%;
   }
 }

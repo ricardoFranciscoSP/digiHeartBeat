@@ -1,70 +1,104 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    background-color: #fff;
-    border-top: 1px solid #e0e0e0;
-    flex-wrap: wrap;
-  }
-  
-  .column {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+  height: auto;
+  position: relative; /* Necessário para posicionamento absoluto da imagem */
+  background-image: url('/assets/verde-rodape.png'); /* Define a imagem como fundo */
+  background-repeat: no-repeat;
+  background-size: 18%; /* Ajusta o tamanho da imagem */
+  background-position: calc(50% - 160px) bottom; /* Posiciona a imagem no centro inferior */
+  z-index: 1; /* Coloca a imagem atrás dos elementos */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 0;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 10px; /* Adiciona espaço entre o logo e o texto de copyright */
+  margin-left: 90px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+  margin-bottom: 90px; /* Adiciona margem inferior para espaço entre ícones e imagem */
+}
+
+.socialIcons i {
+  font-size: 20px;
+  color: #000; /* Preto */
+  margin-right: 5px;
+}
+
+.inlineLinks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.inlineLinks a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inlineLinks span {
+  color: #000;
+}
+
+/* Estilo para a imagem do rodapé */
+.footerImage {
+  display: none;
+}
+
+.footerImage img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
     flex-direction: column;
     align-items: center;
-    flex: 1;
-    padding: 10px;
   }
-  
-  .logo {
-    margin-bottom: 10px;
+
+  .column {
+    margin-bottom: 20px;
   }
-  
-  .copyright {
-    font-size: 12px;
-    color: #000;
-  }
-  
-  .title {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #000;
-  }
-  
-  .socialIcons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .socialIcons i {
-    font-size: 20px;
-    color: #000; /* Preto */
-  }
-  
-  .inlineLinks {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .inlineLinks a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-  }
-  
-  .inlineLinks span {
-    color: #000;
-  }
-  
-  @media (max-width: 768px) {
-    .footer {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .column {
-      margin-bottom: 20px;
-    }
-  }
-  
+}
