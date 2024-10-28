@@ -3,15 +3,15 @@ import styles from './promoSection.module.css';
 
 const PromoSection = () => {
   return (
-    <>
+    <section className={styles.promoContent}>
       {/* Bloco Vermelho com os textos promocionais */}
-      <section className={styles.promoContent}>
+      <section className={styles.promoContentUnique}>
         <h1>Unique Solutions for Unique Journeys</h1>
         <p>
           Discover how our strategic and technological expertise supports your business growth.
         </p>
         <button className={styles.promoButton}>
-          Schedule a meeting with our experts now!
+          Schedule a meeting with our experts now! 
         </button>
       </section>
 
@@ -19,8 +19,8 @@ const PromoSection = () => {
       <section className={styles.signupSection}>
         <div className={styles.signupContent}>
           <div className={styles.signupText}>
-          <i className="fa fa-envelope"></i>
-            <h2>Prepare-se para um mundo em constante <br/> Transformação.</h2>
+          <i className={`fa fa-envelope ${styles.iconBlack}`}></i>            
+          <h2>Prepare-se para um mundo em constante <br/> Transformação.</h2>
             <p>Inscreva-se para receber nossos conteúdos.</p>
           </div>
           <form className={styles.signupForm}>
@@ -40,7 +40,7 @@ const PromoSection = () => {
           </form>
         </div>
       </section>
-    </>
+    </section>
   );
 };
 

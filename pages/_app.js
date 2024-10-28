@@ -1,7 +1,6 @@
 import '../styles/index.css';
 import { ApolloProvider } from '@apollo/client';
 import { client } from '../lib/apollo';
-import { gql } from '@apollo/client';
 import { IdProvider } from '../context/idContext';
 import React, { useState } from 'react';
 import LoadingComponent from '../components/Loading';

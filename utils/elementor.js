@@ -4,9 +4,7 @@ const wordPressSiteUrl = removeTrailingSlash( process.env.NEXT_PUBLIC_WORDPRESS_
 
 /**
  * Get Elementor CSS Links data
- *
  * @param {int} postId post ID.
- *
  * @return {Array} Elementor CSS Links data.
  */
 
