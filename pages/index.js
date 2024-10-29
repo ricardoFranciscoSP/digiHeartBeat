@@ -4,9 +4,9 @@ import Header from '../components/Header';
 import BannersHome from '../components/Banners';
 import styles from './home.module.css';
 import ScrollDownIcon from '../components/ScrollDownIcon';
-import Footer from '../components/footer';
 import PromoSection from '../components/PromoSection';
 import { getPageData } from '../lib/dataFetch';
+import Footer from '../components/Footer';
 
 export default function Home({ page }) {
   return (
