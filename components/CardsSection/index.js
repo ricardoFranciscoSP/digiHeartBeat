@@ -61,7 +61,7 @@ const CardsSection = () => {
                             <div className="card-body">
                                     <div className={`card-title ${styles.gridContainer}`}>
                                         <span className={`${styles.leftAlign} ${styles.grayText}`}>&</span>
-                                        <span className={`${styles.rightAlign} ${styles.redText}`}><span className={`${styles.blackText}`}>Tech</span> Trust</span>
+                                        <span className={`${styles.rightAlign} ${styles.redText}`}><span className={`${styles.blackText}`}>Tech</span>  <br /> Trust</span>
                                     </div>
                                 <p className="card-text">
                                     <strong>We provide flexible and secure tech solutions. </strong> By 
