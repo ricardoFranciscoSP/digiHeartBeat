@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from './header.module.css';
 import { GET_MENU } from '../../lib/queries';
 import { client } from '../../lib/apollo';
-
+ 
 const Header = () => {
     const [menus, setMenus] = useState([]);
     const [showLanguageMenu, setShowLanguageMenu] = useState(false);

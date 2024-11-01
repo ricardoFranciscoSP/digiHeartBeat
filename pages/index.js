@@ -7,6 +7,7 @@ import ScrollDownIcon from '../components/ScrollDownIcon';
 import PromoSection from '../components/PromoSection';
 import { getPageData } from '../lib/dataFetch';
 import Footer from '../components/Footer';
+import CardsSection from '../components/CardsSection';
 
 export default function Home({ page }) {
   return (
@@ -21,6 +22,7 @@ export default function Home({ page }) {
           <ScrollDownIcon />
         </div>
         <ContentSection page={page} />
+        <CardsSection />
         <PromoSection />
         <Footer />
       </div>

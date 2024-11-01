@@ -1,9 +1,11 @@
-/* Header principal (desktop) */
+/* Header principal (desktop) */ 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #bdc3c7;
+    border-bottom: 10px solid transparent; /* Define a largura do border-bottom */
+    border-image: url('/assets/menu-barra.png') 130 100% stretch; /* Adiciona a imagem como border-bottom e estica para 100% */
+
     padding: 15px;
     position: relative;
     top: 0;
