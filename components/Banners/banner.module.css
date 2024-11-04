@@ -9,6 +9,12 @@
     src: url('/assets/fonts/IsidoraSans-Light.ttf') format('opentype');
   }
 
+  @font-face {
+    font-family: 'isidora-Semibold';
+    src: url('/assets/fonts/IsidoraSans-SemiBold.ttf') format('opentype');
+  }
+
+
 .bannercontainer {
     position: relative;
     width: 100%;
@@ -50,13 +56,13 @@
 }
 
 .bannertitle {
-    font-size: 50px; /* Ajuste conforme necessário */
+    font-size: 4vw; /* Ajuste conforme necessário */
     margin-bottom: 1rem;
-    font-family: 'isidora-regular';
+    font-family: 'isidora-Semibold';
 }
 
 .bannerdescription {
-    font-size: 34px; /* Ajuste conforme necessário */
+    font-size: 2vw; /* Ajuste conforme necessário */
     font-family: 'isidora-light';
 }
 
@@ -85,11 +91,11 @@
     }
 
     .bannertitle {
-        font-size: 2rem;
+        font-size: 6vw; /* Ajuste de tamanho com vw para telas menores */
     }
 
     .bannerdescription {
-        font-size: 1rem;
+        font-size: 4vw;
     }
 }
 
@@ -99,11 +105,12 @@
         padding: 5px;
     }
 
+   
     .bannertitle {
-        font-size: 1.5rem;
+        font-size: 7vw;
     }
 
     .bannerdescription {
-        font-size: 0.875rem;
+        font-size: 5vw;
     }
 }

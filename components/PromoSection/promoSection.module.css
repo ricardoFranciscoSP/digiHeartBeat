@@ -133,11 +133,31 @@
 }
 
 /* Responsividade */
+
+/* Telas até 1024px */
+@media (max-width: 1024px) {
+  .signupContent {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .promoContent h1 {
+    font-size: 32px;
+  }
+
+  .promoButton {
+    font-size: 26px;
+    padding: 10px 20px;
+  }
+}
+
+/* Telas até 768px */
 @media (max-width: 768px) {
   .signupContent {
     flex-direction: column;
     text-align: center;
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   .signupText {
@@ -183,5 +203,26 @@
     font-size: 18px;
     padding: 10px 20px;
     width: 80%;
+  }
+}
+
+/* Telas até 480px */
+@media (max-width: 480px) {
+  .signupSection {
+    margin: 50px 0 30px;
+  }
+
+  .promoContent h1 {
+    font-size: 20px;
+  }
+
+  .promoContent p {
+    font-size: 14px;
+  }
+
+  .promoButton {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 100%;
   }
 }

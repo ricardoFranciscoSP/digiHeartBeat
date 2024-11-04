@@ -11,7 +11,7 @@ const CardsSection = () => {
                     {/* Card 1 */}
                     <div className={`col-md-3 mb-4 ${styles.card1}`}>
                         <div className={`card ${styles.cardCustom}`}>
-                            <div className={styles.cardNumber}>01.</div>
+                            <div className={styles.cardNumber}>01.</div> 
                             <div className="card-body">
                                 <div  className='card-header-um'>
                                     <span className={`${styles.rightAlign} ${styles.blackText}`}>Customer</span><br />
