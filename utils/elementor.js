@@ -57,6 +57,14 @@ export const getElementorCssLinksData = ( postId ) => {
 		{
 			id: 'elementor-icons-fa-solid-css',
 			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css`
-		}
+		},
+		{
+			id: 'swiper-css',
+			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css`
+		},
+		{
+			id: 'e-swiper-css',
+			link: `${wordPressSiteUrl}/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css`
+		},
 	]
 }

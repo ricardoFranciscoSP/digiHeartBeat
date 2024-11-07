@@ -17,6 +17,16 @@
     src: url('/assets/fonts/IsidoraSans-Thin.ttf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url('/assets/fonts/OpenSans-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
 
 .scroll-icon {
     text-align: center;
@@ -121,6 +131,7 @@
 
 #card4 {
     margin-top: 320px; /* Quarto card com ainda mais deslocamento */
+    margin-bottom: 50px;
 }
 
 .gridContainer {
@@ -163,4 +174,163 @@
     font-weight: bold;
     line-height: 1.1;
     padding-left: 10px;
+}
+
+/* Estilo dos comentários */
+.ti-widget.ti-wp-testimonial-1 {
+    overflow: visible !important;
+    width: 100%;
+    display: block;
+    text-align: left;
+    direction: ltr;
+    box-sizing: border-box;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container {
+    display: block;
+    color: var(--color-black);
+    margin-bottom: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    box-sizing: border-box;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-reviews-container {
+    position: relative;
+    display: block;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-controls {
+    margin-top: 6px;
+    top: 112.5px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-col-3 .ti-review-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item {
+    padding: 0 8px;
+    transition: transform 300ms ease-out;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner {
+    position: relative;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item>.ti-inner {
+   
+    padding: 25px !important;
+    margin: 0 !important;
+    display: block;
+    position: relative;
+}
+
+
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-header {
+    padding: 15px 0 0 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+
+.ti-widget.ti-wp-testimonial-1 .ti-profile-img {
+    margin: 0 5px 0 0 !important;
+    display: none;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-profile-img img {
+    display: none;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-profile-details {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #d81b60;
+    margin-bottom: 2px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-date {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px !important;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-content .ti-review-text {
+    height: 200px;
+    font-size: 16px;
+    text-align: center;
+    transition: height 0.5s;
+    font-style: normal;
+    padding-right: 0;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-read-more {
+    display: block;
+    padding: 5px 0 0;
+    text-align: center;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container, .ti-widget.ti-wp-testimonial-1 .ti-widget-container * {
+    font-family: "Open Sans Italic", sans-serif;
+    font-size: 16px;
+    line-height: 1.4em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner:after {
+    top: 22px;
+    right: 22px;
+}
+
+.ti-widget.ti-wp-testimonial-1.ti-no-logo .ti-inner:after {
+    background: none !important;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-inner:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 50px; /* Adiciona espaçamento de 50px entre os itens */
+    margin: 0 -8px;
+    padding-top: 5px;
 }
