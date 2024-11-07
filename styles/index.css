@@ -179,8 +179,12 @@
 /* Estilo dos comentários */
 .ti-widget.ti-wp-testimonial-1 {
     overflow: visible !important;
+}
+
+.ti-widget.ti-wp-testimonial-1 {
     width: 100%;
     display: block;
+    overflow: hidden;
     text-align: left;
     direction: ltr;
     box-sizing: border-box;
@@ -188,32 +192,67 @@
 
 .ti-widget.ti-wp-testimonial-1 .ti-widget-container {
     display: block;
-    color: var(--color-black);
+    color: #000000;
     margin-bottom: 15px;
-    font-family: "Open Sans", sans-serif;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container, .ti-widget.ti-wp-testimonial-1 .ti-widget-container * {
+    font-family: "Open Sans Italic";
     font-size: 14px;
     line-height: 1.4em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-reviews-container {
-    position: relative;
-    display: block;
-}
-
 .ti-widget.ti-wp-testimonial-1 .ti-controls {
-    margin-top: 6px;
-    top: 112.5px;
+    display: block;
+    margin-top: -12px;
+    width: 100%;
+    position: absolute;
+    height: 0px;
+    z-index: 1;
+    top: 50%;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
+.ti-widget.ti-wp-testimonial-1 .ti-controls .ti-next {
+    right: 2px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-controls .ti-prev {
+    left: 2px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-controls .ti-next, .ti-widget.ti-wp-testimonial-1 .ti-controls .ti-prev {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    opacity: 1;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-reviews-container .ti-reviews-container-wrapper {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 20px !important;
+    padding-bottom: 8px;
 }
 
 .ti-widget.ti-wp-testimonial-1 .ti-col-3 .ti-review-item {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item {
+    display: flex !important;
 }
 
 .ti-widget.ti-wp-testimonial-1 .ti-review-item {
@@ -222,70 +261,56 @@
 }
 
 .ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner {
-    position: relative;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 4px !important;
+    width: 100%;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-review-item>.ti-inner {
-   
-    padding: 25px !important;
-    margin: 0 !important;
-    display: block;
-    position: relative;
+.ti-widget.ti-wp-testimonial-1 .ti-review-item>.ti-inner, .ti-widget.ti-wp-testimonial-1 .ti-load-more-reviews-container .ti-load-more-reviews-button {
+    backdrop-filter: blur(0px);
 }
 
-
-
-.ti-widget.ti-wp-testimonial-1 .ti-review-header {
-    padding: 15px 0 0 15px;
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-stars {
+    margin-top: 0px !important;
+    margin-bottom: 15px !important;
+    text-align: left;
 }
 
+.ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper .ti-inner>.ti-stars, .ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper .ti-popup-inner>.ti-stars {
+    margin-bottom: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
 
-.ti-widget.ti-wp-testimonial-1 .ti-profile-img {
-    margin: 0 5px 0 0 !important;
+.ti-widget.ti-wp-testimonial-1.ti-no-stars .ti-review-item .ti-stars .ti-star.f {
     display: none;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-profile-img img {
-    display: none;
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-stars .ti-star {
+    width: 18px;
+    height: 18px;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-profile-details {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-review-header {
+    flex-wrap: wrap;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-review-header::after {
+    top: 0px !important;
+    right: 0px !important;
+    left: unset !important;
+}
+
+.ti-widget.ti-wp-testimonial-1.ti-no-logo .ti-review-header:after {
+    border: none;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-review-content {
     text-align: center;
-    margin: 0 !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-name {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #d81b60;
-    margin-bottom: 2px;
-}
-
-.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-date {
-    font-family: 'Open Sans', sans-serif;
-    color: #000;
-    font-weight: bold;
-    font-size: 12px !important;
-}
-
-.ti-widget.ti-wp-testimonial-1 .ti-review-content .ti-review-text {
-    height: 200px;
-    font-size: 16px;
-    text-align: center;
-    transition: height 0.5s;
-    font-style: normal;
-    padding-right: 0;
+    margin-bottom: 15px;
+    height: 150.5px !important;
 }
 
 .ti-widget.ti-wp-testimonial-1 .ti-read-more {
@@ -294,43 +319,62 @@
     text-align: center;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-widget-container, .ti-widget.ti-wp-testimonial-1 .ti-widget-container * {
-    font-family: "Open Sans Italic", sans-serif;
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-profile-details {
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: left;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner .ti-profile-details .ti-name {
+    padding-right: 0px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #801619;
+    margin-bottom: 2px;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container .ti-date {
+    color: #000000;
+    font-size: 11.2px !important;
+    margin-bottom: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container, .ti-widget.ti-wp-testimonial-1 .ti-widget-container * {
+    font-family: "Open Sans Italic";
+    font-size: 14px;
     line-height: 1.4em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-review-item .ti-inner:after {
-    top: 22px;
-    right: 22px;
-}
-
-.ti-widget.ti-wp-testimonial-1.ti-no-logo .ti-inner:after {
-    background: none !important;
-}
-
-.ti-widget.ti-wp-testimonial-1 .ti-inner:after {
-    content: "";
+.ti-widget.ti-wp-testimonial-1 .ti-widget-container {
     display: block;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 0px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    color: #000000;
+    margin-bottom: 15px;
 }
 
-.ti-widget.ti-wp-testimonial-1 .ti-reviews-container-wrapper {
+.ti-widget.ti-wp-testimonial-1 .ti-review-content {
+    font-family: "Open Sans";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 18.85px;
+    font-size: 16px;
+    text-align: center;
+    transition: height 0.5s;
+    font-style: normal;
+    -webkit-line-clamp: 10;
     overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center; /* Centraliza os itens */
-    gap: 50px; /* Adiciona espaçamento de 50px entre os itens */
-    margin: 0 -8px;
-    padding-top: 5px;
+    padding-right: 0;
+    margin-top: 30px;
+    padding: 20px
 }
