@@ -570,3 +570,13 @@ img.attachment-full.size-full.wp-image-157 {
         margin-top: -100px; /* Ajuste conforme necessário */
     }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Estilos específicos para dispositivos Mac */
+    .elementor-8 .elementor-element.elementor-element-9383a9a img {
+        z-index: 9999 !important;
+    }
+    img.attachment-full.size-full.wp-image-157 {
+        margin-top: -250px; /* Ajuste conforme necessário */
+    }
+}
