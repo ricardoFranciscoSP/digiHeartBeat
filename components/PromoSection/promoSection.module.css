@@ -1,7 +1,7 @@
 /* Bloco Vermelho */
 .promoContent {
-  background: url('/assets/barra-cinza-vermelho.png') no-repeat center center;
-  background-size: cover;
+  background: url('/assets/barra-cinza-vermelho.png') no-repeat center;
+  background-size: 100% 100%; /* Ajusta a largura e altura do background */
   padding: 40px 20px;
   color: var(--color-white);
   width: 100%;
@@ -226,4 +226,10 @@
     padding: 8px 16px;
     width: 100%;
   }
+}
+
+
+button.promoSection_submitButton__lPxnm {
+  color: #000;
+  font-weight: 700;
 }
