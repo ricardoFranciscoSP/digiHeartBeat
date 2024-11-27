@@ -601,3 +601,7 @@ img.attachment-medium_large.size-medium_large.wp-image-176 {
     width: 47% !important;
     margin-top: -200px;
 }
+
+span.ti-stars {
+    display: none;
+}

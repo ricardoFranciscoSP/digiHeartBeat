@@ -1,30 +1,21 @@
 // index.js
-import Head from 'next/head'; 
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import BannersHome from '../components/Banners';
-import styles from './home.module.css';
 import ScrollDownIcon from '../components/ScrollDownIcon';
 import PromoSection from '../components/PromoSection';
 import { getPageData } from '../lib/dataFetch';
-import Footer from '../components/Footer';
+import styles from './home.module.css';
 
 export default function Home({ page }) {
   return (
-    <>
-      <Head>
-        <title key="pagetitle">What We Do</title>
-      </Head>
-      <div className={styles.container}>
-        <Header />
-        <div className={styles.bannerContainer}>
-          <BannersHome />
-          <ScrollDownIcon />
-        </div>
-        <ContentSection page={page} />
-        <PromoSection />
-        <Footer />
+    <Layout title="What We Do">
+      <div className={styles.bannerContainer}>
+        <BannersHome />
+        <ScrollDownIcon />
       </div>
-    </>
+      <ContentSection page={page} />
+      <PromoSection />
+    </Layout>
   );
 }
 
