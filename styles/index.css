@@ -528,8 +528,8 @@ svg:not(:root) {
     position: relative;
     transition-property: transform;
 }
-elementor-element.elementor-element-9383a9a.elementor-widget.elementor-widget-image {
-    z-index: 9999;
+.elementor-element.elementor-element-9383a9a.elementor-widget.elementor-widget-image {
+    z-index: 9999 !important;
 }
 
 .elementor-8 .elementor-element.elementor-element-9383a9a img {
