@@ -7,12 +7,12 @@
     --border-radius: 30px;
   }
 
-  @font-face {
+@font-face {
     font-family: 'Isidora';
     src: url('/assets/fonts/IsidoraSans-SemiBold.ttf') format('opentype');
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'IsidoraSans-Thin';
     src: url('/assets/fonts/IsidoraSans-Thin.ttf') format('opentype');
 }
@@ -27,6 +27,7 @@
     font-family: 'Open Sans';
     src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
 }
+
 
 .scroll-icon {
     text-align: center;
@@ -71,6 +72,9 @@
     z-index: 1;
 }
 
+.cardNumber, .highlight, .card-text, .btnSeeMore, .blackText, .redText {
+    font-family: 'Isidora';
+}
 .cardNumber {
     position: absolute;
     top: 10px;
@@ -78,7 +82,6 @@
     font-size: 0.7rem;
     font-weight: bold;
     color: #000; /* Cor do número */
-    font-family: 'Isidora';
 }
 
 .card-title {
@@ -92,13 +95,11 @@
 .highlight {
     color: #d81b60; /* Cor rosa/vermelho para o texto destacado */
     font-weight: bold;
-    font-family: 'Isidora';
 }
 
 .card-text {
     font-size: 16px;
     color: #000;
-    font-family: 'Isidora';
 }
 
 .btnSeeMore {
@@ -113,7 +114,7 @@
     text-decoration: none;
     font-weight: 500;
     text-align: center;
-	  width:60%;
+	width:60%;
 }
 
 /* Estilo para criar o efeito de escadinha */
@@ -141,22 +142,16 @@
     margin-left: 0px;
 }
 
-.rightAlign {
-    text-align: right;
-}
-
-.leftAlign {
+.rightAlign, .leftAlign {
     text-align: right;
 }
 
 .blackText {
-    font-family: 'Isidora';
-    font-size: 2rem; /* Ajuste o tamanho para que fique mais próximo do desejado */
+    font-size: 2rem;
     font-weight: bold;
-    color: #000; /* Cor padrão do título */
+    color: #000;
     margin-left: 15px;
-    line-height: 1; /* Diminui o espaço entre linhas */
-    text-align: right;
+    line-height: 1;
 }
 
 .grayText {
@@ -529,6 +524,21 @@ svg:not(:root) {
     position: relative;
     transition-property: transform;
 }
+
+.elementor-8 .elementor-element.elementor-element-1f656593 .elementor-swiper-button.elementor-swiper-button-prev, .elementor-8 .elementor-element.elementor-element-1f656593 .elementor-swiper-button.elementor-swiper-button-next,
+.elementor-8 .elementor-element.elementor-element-18c58f35 .elementor-swiper-button.elementor-swiper-button-prev, .elementor-8 .elementor-element.elementor-element-18c58f35 .elementor-swiper-button.elementor-swiper-button-next {
+    font-size: 45px;
+}
+
+
+.elementor-8 .elementor-element.elementor-element-1f656593 .elementor-swiper-button.elementor-swiper-button-prev svg, 
+.elementor-8 .elementor-element.elementor-element-1f656593 .elementor-swiper-button.elementor-swiper-button-next svg,
+.elementor-8 .elementor-element.elementor-element-18c58f35 .elementor-swiper-button.elementor-swiper-button-prev svg, 
+.elementor-8 .elementor-element.elementor-element-18c58f35 .elementor-swiper-button.elementor-swiper-button-next svg {
+    fill: #bdc3c7;
+    font-weight: 100;
+}
+
 .elementor-element.elementor-element-9383a9a.elementor-widget.elementor-widget-image {
     z-index: 9999 !important;
 }
