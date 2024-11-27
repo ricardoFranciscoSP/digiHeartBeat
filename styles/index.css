@@ -594,3 +594,10 @@ img.attachment-full.size-full.wp-image-157 {
         margin-top: -250px; /* Ajuste conforme necessário */
     }
 }
+
+
+/* Estilos imagem bloco connect */
+img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 47% !important;
+    margin-top: -200px;
+}
