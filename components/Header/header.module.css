@@ -2,10 +2,8 @@
     position: relative;
     width: 100%;
     padding-bottom: 30px; /* Adiciona espaço abaixo do conteúdo do header */
-    background-image: url('/assets/menu-barra.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom 20% right 80%; /* Ajuste fino da posição */
+    background: url('/assets/menu-barra.png') no-repeat bottom 20% right 80%;
+    background-size: cover; /* Garante que a imagem cubra todo o espaço do header */
 }
 
 .desktopHeader, .mobileHeader {
@@ -51,11 +49,16 @@
 }
 
 .headerLink {
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    color: #000;
+    color: #838080;
     font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.headerLink:hover,
+.headerLink:active {
+    color: #b5100C;
 }
 
 .icons {
@@ -121,8 +124,7 @@
     }
 
     .logo {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
     .icons {
@@ -164,8 +166,7 @@
     }
 
     .logo {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
     .icons {
@@ -189,5 +190,22 @@
 
     .menuIcon {
         width: 25px; /* Reduz o tamanho do ícone de menu */
+    }
+}
+
+/* Ajustes adicionais para responsividade */
+@media (max-width: 320px) {
+    .headerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .icons {
+        margin-right: 0;
     }
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Link from "next/link";
+import { useRouter } from 'next/router';
 import styles from './header.module.css';
 import { GET_MENU } from '../../lib/queries';
 import { client } from '../../lib/apollo';
@@ -11,6 +12,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false); // Novo estado para controlar a animação
     const languageMenuRef = useRef(null);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -66,7 +68,7 @@ const Header = () => {
                     <div className={`${styles.headerMenu} ${isLoaded ? styles.fadeIn : ''}`}>
                         <nav className={styles.nav}>
                             {menus && menus.map((menu, index) => (
-                                <Link key={index} className={styles.headerLink} href={menu.url}>
+                                <Link key={index} className={`${styles.headerLink} ${router.pathname === menu.url ? styles.active : ''}`} href={menu.url}>
                                     {menu.label}
                                 </Link>
                             ))}
@@ -124,7 +126,11 @@ const Header = () => {
                     </div>
                     {isMenuOpen && (
                         <nav className={styles.mobileNav}>
-                           
+                            {menus && menus.map((menu, index) => (
+                                <Link key={index} className={`${styles.headerLink} ${router.pathname === menu.url ? styles.active : ''}`} href={menu.url}>
+                                    {menu.label}
+                                </Link>
+                            ))}
                         </nav>
                     )}
                 </div>
