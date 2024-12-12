@@ -1,18 +1,27 @@
+.layoutSection {
+  width: 100%;
+}
+
 .footer {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Alinha os itens ao topo */
-  padding: 20px;
+  align-items: stretch;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 50px 0px 120px 0px;
   background-color: #fff;
-  border-top: 1px solid #e0e0e0;
   flex-wrap: wrap;
   height: auto;
-  position: relative; /* Necessário para posicionamento absoluto da imagem */
-  background-image: url('/assets/verde-rodape.png'); /* Define a imagem como fundo */
+  position: relative;
+  background-image: url("/assets/verde-rodape.png");
   background-repeat: no-repeat;
-  background-size: 18%; /* Ajusta o tamanho da imagem */
-  background-position: calc(50% - 160px) bottom; /* Posiciona a imagem no centro inferior */
-  z-index: 1; /* Coloca a imagem atrás dos elementos */
+  background-size: 18%;
+  background-position: calc(50% - 160px) bottom;
+  z-index: 1;
 }
 
 .column {
@@ -21,6 +30,21 @@
   align-items: center;
   flex: 1;
   padding: 10px;
+}
+
+.columnItemsStart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+}
+
+.columnStart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+  padding: 10px 0;
 }
 
 .logoContainer {
@@ -36,25 +60,30 @@
 .copyright {
   font-size: 12px;
   color: #000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-top: 10px; /* Adiciona espaço entre o logo e o texto de copyright */
-  margin-left: 90px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0px;
   font-weight: 700;
 }
 
 .title {
   font-size: 20px;
-  margin-bottom: 10px;
-  margin-right: 20px;
   color: #000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.disclaimer {
+  font-size: 14px;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .socialIcons {
   display: flex;
   gap: 10px;
-  margin-right: 20px;
-  margin-bottom: 90px; /* Adiciona margem inferior para espaço entre ícones e imagem */
 }
 
 .socialIcons i {
@@ -73,8 +102,10 @@
 .inlineLinks a {
   text-decoration: none;
   color: #000;
-  font-size: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  white-space: nowrap;
 }
 
 .inlineLinks span {
