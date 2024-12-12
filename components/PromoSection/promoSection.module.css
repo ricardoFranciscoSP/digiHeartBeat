@@ -1,6 +1,6 @@
 /* Bloco Vermelho */
 .promoContent {
-  background: url('/assets/barra-cinza-vermelho.png') no-repeat center;
+  background: url("/assets/barra-cinza-vermelho.png") no-repeat center;
   background-size: 100% 100%; /* Ajusta a largura e altura do background */
   padding: 40px 20px;
   color: var(--color-white);
@@ -125,12 +125,30 @@
 
 .checkboxLabel {
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 .iconBlack {
   color: var(--color-black);
+}
+
+.titleMedium {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.subtitleMedium {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.inputText {
+  border: 1px solid #000;
+}
+
+.iconSizeMd {
+  font-size: 24px;
 }
 
 /* Responsividade */
@@ -227,7 +245,6 @@
     width: 100%;
   }
 }
-
 
 button.promoSection_submitButton__lPxnm {
   color: #000;
