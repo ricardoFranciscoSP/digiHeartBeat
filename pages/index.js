@@ -1,12 +1,16 @@
 // index.js
-import Layout from '../components/Layout';
-import BannersHome from '../components/Banners';
-import ScrollDownIcon from '../components/ScrollDownIcon';
-import PromoSection from '../components/PromoSection';
-import { getPageData } from '../lib/dataFetch';
-import styles from './home.module.css';
+import BannersHome from "../components/Banners";
+import Layout from "../components/Layout";
+import PromoSection from "../components/PromoSection";
+import ScrollDownIcon from "../components/ScrollDownIcon";
+import { getPageData } from "../lib/dataFetch";
+import styles from "./home.module.css";
+
+import { useElementsKitSlider } from "../hooks/useElementsKitSlider";
 
 export default function Home({ page }) {
+  useElementsKitSlider();
+
   return (
     <Layout title="What We Do">
       <div className={styles.bannerContainer}>
