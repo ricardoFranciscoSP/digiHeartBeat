@@ -1,11 +1,13 @@
-import '../styles/index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { ApolloProvider } from '@apollo/client';
-import { client } from '../lib/apollo';
-import { IdProvider } from '../context/idContext';
-import React, { useState } from 'react';
-import LoadingComponent from '../components/Loading';
-import { GET_PAGE_ID_BY_SLUG } from '../lib/queries';
+import "../styles/index.css";
+import "../styles/section-business-pulse.css";
+
+import { ApolloProvider } from "@apollo/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import LoadingComponent from "../components/Loading";
+import { IdProvider } from "../context/idContext";
+import { client } from "../lib/apollo";
+import { GET_PAGE_ID_BY_SLUG } from "../lib/queries";
 
 function MyApp({ Component, pageProps, id }) {
   const [animationEnded, setAnimationEnded] = useState(false);
@@ -30,9 +32,9 @@ function MyApp({ Component, pageProps, id }) {
 MyApp.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
   let id = null;
-  
+
   // Pega o slug da URL
-  const slug = ctx.query.slug || 'home'; // Default para 'home' se não houver slug
+  const slug = ctx.query.slug || "home"; // Default para 'home' se não houver slug
 
   try {
     const { data } = await client.query({
