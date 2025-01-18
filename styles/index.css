@@ -28,6 +28,38 @@
   src: url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+.elementor-section-wrap {
+  width: 100%;
+  min-width: fit-content;
+  overflow-x: auto;
+}
+
+.elementor-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title-slider {
+  color: var(--color-red);
+  font-family: "Isidora";
+  font-size: 22px !important;
+  font-weight: 400;
+}
+
 .scroll-icon {
   text-align: center;
   cursor: pointer;
@@ -57,7 +89,11 @@
   background-position: center;
   padding: 50px 0;
   opacity: 0.5;
+
+  width: 100%;
+  min-width: fit-content;
 }
+
 /* Estilo dos cartões */
 .cardCustom {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);

@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Isidora";
+  src: url("/assets/fonts/IsidoraSans-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "IsidoraSans-Thin";
+  src: url("/assets/fonts/IsidoraSans-Thin.ttf") format("opentype");
+}
+
+.background {
+  background-image: url("/assets/imagem2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow: visible;
+}
+
+.cardCustom {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  padding: 40px 30px;
+  border-radius: 15px;
+  position: relative;
+  width: 300px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardNumber {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: "Isidora";
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 20px 0;
+  font-family: var(--font-family);
+}
+
+.btnSeeMore-cards {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 1px solid #b30404;
+  border-radius: 35px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: min-content;
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: "Roboto", Sans-serif;
+  margin-top: auto;
+}
+
+.btnSeeMore-cards:hover {
+  background-color: #b30404;
+  color: white;
+}
+
+/* Container principal */
+.e-con-inner {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Escalonamento dos cards */
+#card1 {
+  transform: translateY(0);
+}
+#card2 {
+  transform: translateY(60px);
+}
+#card3 {
+  transform: translateY(120px);
+}
+#card4 {
+  transform: translateY(180px);
+}
+
+/* Estilos de texto */
+.blackText {
+  font-family: "Isidora";
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  line-height: 1.2;
+}
+
+.grayText {
+  font-family: "IsidoraSans-Thin";
+  font-size: 48px;
+  color: #999;
+  display: inline-block;
+  line-height: 1;
+}
+
+.redText {
+  font-family: "Isidora";
+  color: #b30404;
+  font-size: 28px;
+  font-weight: 600;
+  display: block;
+  line-height: 1.2;
+}
+
+/* Container e layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -15px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Estilos específicos para cada título de card */
+.title-card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.title-card-1 .blackText {
+  font-family: "Isidora";
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+.title-card-1 .comercial-business {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.title-card-1 .grayText {
+  font-family: "IsidoraSans-Thin";
+  font-size: 48px;
+  color: #999;
+  display: inline-block;
+  line-height: 1;
+}
+
+.title-card-1 .redText {
+  font-family: "Isidora";
+  color: #b30404;
+  font-size: 28px;
+  font-weight: 600;
+  white-space: wrap;
+  display: inline-block;
+}
+
+.title-card-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.title-card-2 .blackText {
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title-card-2 .redText {
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title-card-2 .grayText {
+  display: block;
+  margin-top: 5px;
+}
+
+.title-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.title-card-3 .grayText {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title-card-3 .blackText {
+  white-space: nowrap;
+  display: block;
+}
+
+.title-card-3 .redText {
+  white-space: nowrap;
+  display: block;
+  margin-top: 5px;
+}
+
+.title-card-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.title-card-4 .blackText {
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title-card-4 .grayText {
+  display: block;
+  margin: 5px 0;
+}
+
+.title-card-4 .redText {
+  white-space: nowrap;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .cardCustom {
+    width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    transform: translateY(0);
+    margin-bottom: 20px;
+  }
+
+  .cardCustom {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardCustom {
+    width: calc(100% - 30px);
+  }
+}

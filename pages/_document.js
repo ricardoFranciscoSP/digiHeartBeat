@@ -18,6 +18,15 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+          />
+          <link
+            rel="stylesheet"
+            href={`${WP_URL}/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4`}
+          />
+
           {elementorCssLinks?.map((link) => (
             <link key={link.id} rel="stylesheet" href={link.link} />
           ))}
@@ -37,6 +46,21 @@ class MyDocument extends Document {
             rel="stylesheet"
             href={`${WP_URL}/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4`}
           />
+          <link
+            rel="stylesheet"
+            href={`${WP_URL}/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.25.4`}
+          />
+          <link
+            rel="stylesheet"
+            href={`${WP_URL}/wp-content/plugins/elementor/assets/css/common.min.css?ver=3.25.4`}
+          />
+
+          {/* CSS Responsivo do Elementor */}
+          <link
+            rel="stylesheet"
+            href={`${WP_URL}/wp-content/plugins/elementor/assets/css/responsive.min.css?ver=3.25.4`}
+          />
+
           <link
             rel="stylesheet"
             href={`${WP_URL}/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.3.7`}
@@ -74,6 +98,124 @@ class MyDocument extends Document {
           <script
             src={`${WP_URL}/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.3.7`}
             defer
+          />
+
+          {/* Estilos do Swiper e Elementor */}
+          <link
+            rel="stylesheet"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css"
+          />
+
+          {/* Estilos inline necessários */}
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+      .elementor-image-carousel-wrapper.swiper {
+        overflow: hidden;
+      }
+      
+      .elementor-image-carousel.swiper-wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+      }
+      
+      .elementor-image-carousel .swiper-slide {
+        flex-shrink: 0;
+        width: calc((100% - 100px) / 6) !important;
+        margin-right: 20px;
+      }
+      
+      @media (max-width: 1024px) {
+        .elementor-image-carousel .swiper-slide {
+          width: calc((100% - 60px) / 4) !important;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .elementor-image-carousel .swiper-slide {
+          width: calc((100% - 20px) / 2) !important;
+        }
+      }
+    `,
+            }}
+          />
+
+          {/* Scripts necessários na ordem correta */}
+          <script
+            src="https://digi.maneiraweb.com.br/wp-includes/js/jquery/jquery.min.js"
+            defer
+          />
+          <script
+            src="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js"
+            defer
+          />
+          <script
+            src="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"
+            defer
+          />
+          <script
+            src="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js"
+            defer
+          />
+
+          {/* Script de inicialização do Swiper */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            const swiperElement = document.querySelector('.elementor-image-carousel-wrapper');
+            if (swiperElement && typeof Swiper !== 'undefined') {
+              const swiper = new Swiper(swiperElement, {
+                slidesPerView: 6,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+                navigation: {
+                  nextEl: '.elementor-swiper-button-next',
+                  prevEl: '.elementor-swiper-button-prev',
+                },
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                breakpoints: {
+                  320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 15
+                  },
+                  1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 20
+                  }
+                },
+                on: {
+                  init: function() {
+                    console.log('Swiper initialized');
+                  },
+                  slideChange: function() {
+                    console.log('Slide changed');
+                  }
+                }
+              });
+            } else {
+              console.log('Swiper element not found or Swiper not loaded');
+            }
+          }, 1000); // Aguarda 1 segundo após o carregamento da página
+        });
+      `,
+            }}
           />
         </Head>
         <body>

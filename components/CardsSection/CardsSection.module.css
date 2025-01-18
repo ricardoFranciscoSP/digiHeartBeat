@@ -1,127 +1,136 @@
 /* components/CardsSection.module.css */
 @font-face {
-    font-family: 'Isidora';
-    src: url('/assets/fonts/IsidoraSans-SemiBold.ttf') format('opentype');
-  }
-  
-  @font-face {
-    font-family: 'IsidoraSans-Thin';
-    src: url('/assets/fonts/IsidoraSans-Thin.ttf') format('opentype');
+  font-family: "Isidora";
+  src: url("/assets/fonts/IsidoraSans-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "IsidoraSans-Thin";
+  src: url("/assets/fonts/IsidoraSans-Thin.ttf") format("opentype");
 }
 
 .background {
-    background-image: url('/assets/imagem2.png'); /* Substitua pelo caminho da sua imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
+  background-image: url("/assets/imagem2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  min-height: 100vh; /* Garante altura mínima */
+  display: flex;
+  align-items: center;
 }
 
 .cardCustom {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: none;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+  padding: 30px;
+  border-radius: 25px;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardNumber {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: #000; /* Cor do número */
-    font-family: var(--font-family);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1rem;
+  color: #333;
+  font-family: "Isidora";
 }
 
 .card-title {
-    display: inline;
+  display: inline;
 }
 
-.card-header-um{
-    text-align: center;
+.card-header-um {
+  text-align: center;
 }
 
 .highlight {
-    color: #d81b60; /* Cor rosa/vermelho para o texto destacado */
-    font-weight: bold;
-    font-size: 'Isidora';
+  color: #d81b60; /* Cor rosa/vermelho para o texto destacado */
+  font-weight: bold;
+  font-size: "Isidora";
 }
 
 .card-text {
-    font-size: 0.5rem;
-    color: #666;
-    font-family: var(--font-family);
+  font-size: 0.5rem;
+  color: #666;
+  font-family: var(--font-family);
 }
 
 .btnSeeMore {
-    background-color: #61CE7000;
-    fill: #000000;
-    color: #000000;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #B30404;
-    border-radius: 40px;
-    padding: 10px;
-    font-family: var(--font-family);
-    text-decoration: none;
-    font-weight: 500;
-    text-align: center;
+  background-color: #61ce7000;
+  font-family: var(--font-family);
+  font-weight: 500;
+  text-align: center;
+
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #b30404;
+  border-radius: 25px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 /* Estilo para criar o efeito de escadinha */
 .card1 {
-    margin-top: 0px; /* Primeiro card sem deslocamento */
+  margin-top: 0px; /* Primeiro card sem deslocamento */
 }
 
 .card2 {
-    margin-top: 100px; /* Segundo card com um pequeno deslocamento */
+  margin-top: 100px; /* Segundo card com um pequeno deslocamento */
 }
 
 .card3 {
-    margin-top: 160px; /* Terceiro card com mais deslocamento */
+  margin-top: 160px; /* Terceiro card com mais deslocamento */
 }
 
 .card4 {
-    margin-top: 320px; /* Quarto card com ainda mais deslocamento */
+  margin-top: 320px; /* Quarto card com ainda mais deslocamento */
 }
 
 .gridContainer {
-    display: grid;
-    grid-template-columns:  auto auto ; 
-    padding: 5px;
-    margin-left: 0px;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 5px;
+  margin-left: 0px;
 }
 
 .rightAlign {
-    text-align: right;
+  text-align: right;
 }
 
 .leftAlign {
-    text-align: right;
+  text-align: right;
 }
 
 .blackText {
-    font-family: 'Isidora';
-    font-size: 2rem; /* Ajuste o tamanho para que fique mais próximo do desejado */
-    font-weight: bold;
-    color: #000; /* Cor padrão do título */
-    margin-left: 15px;
-    line-height: 1.1;
+  font-family: "Isidora";
+  font-size: 2rem; /* Ajuste o tamanho para que fique mais próximo do desejado */
+  font-weight: bold;
+  color: #000; /* Cor padrão do título */
+  margin-left: 15px;
+  line-height: 1.1;
 }
 
 .grayText {
-    color: gray;
-    font-size: 3.9rem;
-    font-weight: bold;
-    font-family: 'IsidoraSans-Thin';
+  color: gray;
+  font-size: 3.9rem;
+  font-weight: bold;
+  font-family: "IsidoraSans-Thin";
 }
 
 .redText {
-    font-family: 'Isidora';
-    color:#d81b60;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.1;
-    padding-left: 10px;
+  font-family: "Isidora";
+  color: #d81b60;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  padding-left: 10px;
 }
