@@ -221,6 +221,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
+          <script src="/scripts/cardAnimations.js" defer></script>
         </body>
       </Html>
     );

@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  font-family: "IsidoraBlack";
+  src: url("/assets/fonts/Isidora-Black.ttf") format("opentype");
+}
+
+@font-face {
   font-family: "Open Sans";
   src: url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
