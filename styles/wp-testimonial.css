@@ -285,7 +285,100 @@
   opacity: 0.7 !important;
 }
 
-/* Mantém o resto do CSS anterior */
+.elementor-swiper-button svg {
+  width: 82px !important;
+  height: 82px !important;
+  fill: #666 !important;
+  stroke: #fff !important;
+  stroke-width: 85px !important;
+  opacity: 0.7 !important;
+}
+
+.elementor-element.elementor-arrows-position-outside .swiper,
+.elementor-element.elementor-arrows-position-outside .swiper-container,
+.elementor-lightbox.elementor-arrows-position-outside .swiper,
+.elementor-lightbox.elementor-arrows-position-outside .swiper-container {
+  width: 100% !important;
+}
+
+.elementor-element.elementor-arrows-position-outside
+  .swiper-container
+  .elementor-swiper-button-prev,
+.elementor-element.elementor-arrows-position-outside
+  .swiper-container
+  ~ .elementor-swiper-button-prev,
+.elementor-element.elementor-arrows-position-outside
+  .swiper
+  .elementor-swiper-button-prev,
+.elementor-element.elementor-arrows-position-outside
+  .swiper
+  ~ .elementor-swiper-button-prev,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper-container
+  .elementor-swiper-button-prev,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper-container
+  ~ .elementor-swiper-button-prev,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper
+  .elementor-swiper-button-prev,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper
+  ~ .elementor-swiper-button-prev {
+  left: -98px;
+}
+
+.elementor-element.elementor-arrows-position-outside
+  .swiper-container
+  .elementor-swiper-button-next,
+.elementor-element.elementor-arrows-position-outside
+  .swiper-container
+  ~ .elementor-swiper-button-next,
+.elementor-element.elementor-arrows-position-outside
+  .swiper
+  .elementor-swiper-button-next,
+.elementor-element.elementor-arrows-position-outside
+  .swiper
+  ~ .elementor-swiper-button-next,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper-container
+  .elementor-swiper-button-next,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper-container
+  ~ .elementor-swiper-button-next,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper
+  .elementor-swiper-button-next,
+.elementor-lightbox.elementor-arrows-position-outside
+  .swiper
+  ~ .elementor-swiper-button-next {
+  right: -98px;
+}
+
+.title-slider h2.elementor-heading-title.elementor-size-default {
+  font-family: "Isidora", sans-serif !important;
+
+  font-size: 35px !important;
+  color: #b20000 !important;
+}
+
+/* Aplica o filtro grayscale nas imagens do carrossel */
+.elementor-image-carousel .swiper-slide-image {
+  filter: grayscale(100%) !important;
+  opacity: 0.7 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Opcional: remove o filtro no hover */
+.elementor-image-carousel .swiper-slide-image:hover {
+  filter: grayscale(0%) !important;
+  opacity: 1 !important;
+}
+
+.elementor-element.elementor-element-3d5cf38e.e-con-full.e-flex.e-con.e-parent {
+  margin-top: 40px;
+}
+
 .swiper-navigation-button {
   width: 50px !important;
   height: 50px !important;
