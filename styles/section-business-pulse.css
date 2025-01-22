@@ -10,6 +10,23 @@ div#business-pulse-text {
   padding-bottom: 30px;
 }
 
+@media screen and (min-width: 1280px) {
+  div#business-pulse-text
+    .elementor-element.elementor-element-69d7cb5.elementor-widget.elementor-widget-text-editor {
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  div#business-pulse-text h2.elementor-heading-title.elementor-size-default {
+    font-size: 52px;
+  }
+
+  div#text-nuvem-desktop {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
 .elementor-8 .elementor-element.elementor-element-e1c867f.e-con {
   --flex-grow: 0;
   --flex-shrink: 0;
