@@ -1,5 +1,3 @@
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
@@ -33,7 +31,7 @@ const Header = () => {
         );
         console.log("Menu items extracted:", menuItems);
         setMenus(menuItems || []);
-        setIsLoaded(true);
+        setIsLoaded(true); // Define como true após a consulta ser concluída
       } catch (error) {
         console.error("Error fetching menu data:", error);
         setMenus([]);
@@ -44,6 +42,14 @@ const Header = () => {
     fetchMenuData();
   }, []);
 
+  const handleMouseEnter = () => {
+    setShowLanguageMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowLanguageMenu(false);
+  };
+
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
     setShowLanguageMenu(false);
@@ -53,21 +59,21 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleLanguageMenu = () => {
-    setShowLanguageMenu(!showLanguageMenu);
-  };
-
   return (
-    <header className={`${styles.header} ${isLoaded ? styles.loaded : ""}`}>
+    <header className={`${styles.header} ${isLoaded ? styles.fadeIn : ""}`}>
       {/* Menu para desktop */}
       <div className={styles.desktopHeader}>
-        <Link
-          href="/"
-          className={`${styles.logo} ${isLoaded ? styles.fadeIn : ""}`}
-        >
-          <img src="/assets/logo.png" alt="Logo" className={styles.logoImage} />
-        </Link>
         <div className={styles.headerContent}>
+          <Link
+            href="/"
+            className={`${styles.logo} ${isLoaded ? styles.fadeIn : ""}`}
+          >
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              className={styles.logoImage}
+            />
+          </Link>
           <div
             className={`${styles.headerMenu} ${isLoaded ? styles.fadeIn : ""}`}
           >
@@ -78,10 +84,6 @@ const Header = () => {
                     key={index}
                     className={`${styles.headerLink} ${
                       router.pathname === menu.url ? styles.active : ""
-                    } ${
-                      menu.label.toUpperCase() === "GET IN TOUCH"
-                        ? styles.getInTouch
-                        : ""
                     }`}
                     href={menu.url}
                   >
@@ -98,10 +100,10 @@ const Header = () => {
                   className={styles.lupa}
                 />
               </i>
-
               <div
                 className={styles.languageIcon}
-                onClick={toggleLanguageMenu}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 ref={languageMenuRef}
               >
                 {language}
@@ -128,12 +130,7 @@ const Header = () => {
       <div className={styles.mobileHeader}>
         <div className={styles.headerContent}>
           <div className={styles.menuIcon} onClick={toggleMenu}>
-            <FontAwesomeIcon
-              icon={isMenuOpen ? faTimes : faBars}
-              className={`${styles.hamburgerIcon} ${
-                isMenuOpen ? styles.iconOpen : ""
-              }`}
-            />
+            <img src="/assets/menu.png" alt="Menu" className={styles.imgIcon} />
           </div>
           <Link
             href="/"
@@ -155,7 +152,8 @@ const Header = () => {
             </i>
             <div
               className={styles.languageIcon}
-              onClick={toggleLanguageMenu}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               ref={languageMenuRef}
             >
               {language}
@@ -171,11 +169,8 @@ const Header = () => {
               )}
             </div>
           </div>
-        </div>
-
-        {isMenuOpen && (
-          <nav className={styles.mobileNav}>
-            <div className={styles.mobileNavContent}>
+          {isMenuOpen && (
+            <nav className={styles.mobileNav}>
               {menus &&
                 menus.map((menu, index) => (
                   <Link
@@ -184,14 +179,13 @@ const Header = () => {
                       router.pathname === menu.url ? styles.active : ""
                     }`}
                     href={menu.url}
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     {menu.label}
                   </Link>
                 ))}
-            </div>
-          </nav>
-        )}
+            </nav>
+          )}
+        </div>
       </div>
     </header>
   );

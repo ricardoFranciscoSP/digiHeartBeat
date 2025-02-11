@@ -1,116 +1,115 @@
 /* banner.module.css */
 @font-face {
-    font-family: 'isidora-regular';
-    src: url('/assets/fonts/IsidoraSans-Regular.ttf') format('opentype');
-  }
-  
-  @font-face {
-    font-family: 'isidora-light';
-    src: url('/assets/fonts/IsidoraSans-Light.ttf') format('opentype');
-  }
+  font-family: "isidora-regular";
+  src: url("/assets/fonts/IsidoraSans-Regular.ttf") format("opentype");
+}
 
-  @font-face {
-    font-family: 'isidora-Semibold';
-    src: url('/assets/fonts/IsidoraSans-SemiBold.ttf') format('opentype');
-  }
+@font-face {
+  font-family: "isidora-light";
+  src: url("/assets/fonts/IsidoraSans-Light.ttf") format("opentype");
+}
 
+@font-face {
+  font-family: "isidora-Semibold";
+  src: url("/assets/fonts/IsidoraSans-SemiBold.ttf") format("opentype");
+}
 
 .bannercontainer {
-    position: relative;
-    width: 100%;
-    height: 70vh; /* Ajuste conforme necessário */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Ajuste conforme necessário */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .backgroundvideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .bannerslider {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .bannercontent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #000; /* Ajuste conforme necessário */
-    padding: 30px;
-    position: relative;
-    z-index: 1; /* Certifique-se de que o texto está acima do vídeo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000; /* Ajuste conforme necessário */
+  padding: 30px;
+  position: relative;
+  z-index: 1; /* Certifique-se de que o texto está acima do vídeo */
 }
 
 .bannertitle {
-    font-size: 4vw; /* Ajuste conforme necessário */
-    margin-bottom: 1rem;
-    font-family: 'isidora-Semibold';
+  font-size: 3.5vw; /* Ajuste conforme necessário */
+  margin-bottom: 1rem;
+  font-family: "isidora-Semibold";
 }
 
 .bannerdescription {
-    font-size: 2vw; /* Ajuste conforme necessário */
-    font-family: 'isidora-light';
+  font-size: 2vw; /* Ajuste conforme necessário */
+  font-family: "isidora-light";
 }
 
 .span {
-    color: #000; 
-    background-color:#B7D433;/* Ajuste conforme necessário */
-    padding: 2px;
+  color: #000;
+  background-color: #b7d433;
+  padding: 10px 6px 4px 6px;
 }
 
 /* Estilos para garantir que as setas e os pontos sejam visíveis */
-.slick-prev, .slick-next {
-    z-index: 2;
-    color: #000; /* Ajuste conforme necessário */
+.slick-prev,
+.slick-next {
+  z-index: 2;
+  color: #000; /* Ajuste conforme necessário */
 }
 
 .slick-dots li button:before {
-    color: #000; /* Ajuste conforme necessário */
+  color: #000; /* Ajuste conforme necessário */
 }
 
 /* Media queries para responsividade */
 
 /* Tablets e dispositivos menores */
 @media (max-width: 768px) {
-    .bannercontent {
-        padding: 10px;
-    }
+  .bannercontent {
+    padding: 10px;
+  }
 
-    .bannertitle {
-        font-size: 6vw; /* Ajuste de tamanho com vw para telas menores */
-    }
+  .bannertitle {
+    font-size: 6vw; /* Ajuste de tamanho com vw para telas menores */
+  }
 
-    .bannerdescription {
-        font-size: 4vw;
-    }
+  .bannerdescription {
+    font-size: 4vw;
+  }
 }
 
 /* Dispositivos móveis */
 @media (max-width: 480px) {
-    .bannercontent {
-        padding: 5px;
-    }
+  .bannercontent {
+    padding: 5px;
+  }
 
-   
-    .bannertitle {
-        font-size: 7vw;
-    }
+  .bannertitle {
+    font-size: 7vw;
+  }
 
-    .bannerdescription {
-        font-size: 5vw;
-    }
+  .bannerdescription {
+    font-size: 5vw;
+  }
 }
