@@ -73,6 +73,44 @@ class MyDocument extends Document {
           />
           <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer />
 
+          {/* TESTESSSSSSSS */}
+          {/* <script src="/scripts/carouselScripts-jqeury-3.7.1.js" defer></script>
+
+          <script
+            src="/scripts/carouselScripts-jquery-core-1.13.3.js"
+            defer
+          ></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+      var elementorFrontendConfig = ${JSON.stringify(elementorFrontendConfig)};
+      window.elementorFrontendConfig = elementorFrontendConfig;
+    `,
+            }}
+          />
+
+          <script
+            src="/scripts/carouselScripts-frontend-modules.min-3.25.4.js"
+            defer
+          ></script>
+
+          <script
+            src="/scripts/carouselScripts-frontend.min-3.25.4.js"
+            defer
+          ></script>
+
+          <script
+            src="/scripts/carouselScripts-image-carousel.4455c6362492d9067512.js"
+            defer
+          ></script>
+
+          <script
+            src="/scripts/carouselScripts-webpack-3.25.4.js"
+            defer
+          ></script> */}
+          {/* TESTESSSSSSSS FIM */}
+
           {/* jQuery (necessário para o ElementsKit) */}
           <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer />
 
@@ -216,6 +254,46 @@ class MyDocument extends Document {
         });
       `,
             }}
+          />
+
+          {/* SCRIPT-----------------> */}
+          <link
+            rel="stylesheet"
+            id="widget-image-carousel-css"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=3.25.4"
+            media="all"
+          />
+          <link
+            rel="stylesheet"
+            id="elementor-post-8-css"
+            href="https://digi.maneiraweb.com.br/wp-content/uploads/elementor/css/post-8.css?ver=1739318880"
+            media="all"
+          />
+
+          <link
+            rel="stylesheet"
+            id="elementor-frontend-css"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4"
+            media="all"
+          />
+          <link
+            rel="stylesheet"
+            id="swiper-css"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5"
+            media="all"
+          />
+
+          <link
+            rel="stylesheet"
+            id="e-swiper-css"
+            href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.4"
+            media="all"
+          />
+          <meta name="generator" content="WordPress 6.7.2" />
+
+          <meta
+            name="generator"
+            content="Elementor 3.25.4; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap"
           />
         </Head>
         <body>

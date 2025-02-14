@@ -46,6 +46,12 @@ body {
   overflow-x: auto;
 }
 
+.elementor.elementor-8 {
+  /* wp-page */
+  width: 100dvw;
+  padding-right: 22px;
+}
+
 .elementor-section-wrap {
   width: 100%;
   min-width: fit-content;

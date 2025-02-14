@@ -7,9 +7,11 @@ import { getPageData } from "../lib/dataFetch";
 import styles from "./home.module.css";
 
 import { useElementsKitSlider } from "../hooks/useElementsKitSlider";
+import useLoadScripts from "../hooks/useLoadScripts";
 
 export default function Home({ page }) {
   useElementsKitSlider();
+  useLoadScripts();
 
   return (
     <Layout title="What We Do">
