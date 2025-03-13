@@ -95,7 +95,7 @@ const Header = () => {
                       menu.label.toUpperCase() === "GET IN TOUCH"
                         ? styles.getInTouch
                         : ""
-                    }`}
+                    } ${activeSubmenu === menu.label ? styles.active : ""}`}
                     href={menu.url}
                     onClick={(e) => {
                       if (
@@ -217,9 +217,15 @@ const Header = () => {
       </div>
       {activeSubmenu &&
         (activeSubmenu.toUpperCase() === "WHAT WE DO" ? (
-          <SubMenuWhatWeDo onClose={() => setActiveSubmenu(null)} />
+          <SubMenuWhatWeDo
+            onClose={() => setActiveSubmenu(null)}
+            isOpen={activeSubmenu.toUpperCase() === "WHAT WE DO"}
+          />
         ) : (
-          <SubMenuWhoWeAre onClose={() => setActiveSubmenu(null)} />
+          <SubMenuWhoWeAre
+            onClose={() => setActiveSubmenu(null)}
+            isOpen={activeSubmenu.toUpperCase() === "WHO WE ARE"}
+          />
         ))}
     </header>
   );

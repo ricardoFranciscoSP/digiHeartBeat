@@ -3,9 +3,13 @@ import BaseSubMenu from "../BaseSubMenu";
 
 interface SubMenuWhoWeAreProps {
   onClose: () => void;
+  isOpen: boolean;
 }
 
-const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({ onClose }) => {
+const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({
+  onClose,
+  isOpen,
+}) => {
   const mockData = {
     title: "Who We Are",
     mainText:
@@ -31,14 +35,12 @@ const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({ onClose }) => {
         },
       },
       {
-        type: "links" as const,
+        type: "image" as const,
         content: {
-          title: "Join Our Team",
-          links: [
-            { text: "Career Opportunities", url: "/careers" },
-            { text: "Benefits & Culture", url: "/careers/benefits" },
-            { text: "Development Program", url: "/careers/development" },
-          ],
+          image: "/assets/what-we-do-illustration.jpg",
+          title: "Customer strategy",
+          description:
+            "We measure your business performance or the potential of your idea",
         },
       },
     ],
@@ -51,6 +53,7 @@ const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({ onClose }) => {
       middleColumn={mockData.middleColumn}
       rightColumn={mockData.rightColumn}
       onClose={onClose}
+      isOpen={isOpen}
     />
   );
 };

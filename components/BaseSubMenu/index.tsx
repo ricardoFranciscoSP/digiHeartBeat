@@ -6,7 +6,9 @@ import styles from "./baseSubMenu.module.css";
 
 interface LinkColumn {
   title?: string;
-  links: { text: string; url: string }[];
+  links: { text: string; url: string; isBold?: boolean; hasArrow?: boolean }[];
+  splitIntoColumns?: boolean;
+  splitAt?: number;
 }
 
 interface ImageColumn {
@@ -26,6 +28,7 @@ interface BaseSubMenuProps {
   middleColumn: LinkColumn;
   rightColumn: RightColumn[];
   onClose: () => void;
+  isOpen: boolean;
 }
 
 const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
@@ -34,6 +37,7 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
   middleColumn,
   rightColumn,
   onClose,
+  isOpen,
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -49,7 +53,7 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
   }, [onClose]);
 
   return (
-    <div className={styles.submenuContainer} ref={menuRef}>
+    <div className={styles.submenuContainer} ref={menuRef} data-open={isOpen}>
       <div className={styles.background}>
         <div className={styles.diamond1} />
         <div className={styles.diamond2} />
@@ -70,24 +74,89 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
 
         <div className={styles.middleSection}>
           {middleColumn.title && (
-            <h3 className={styles.columnTitle}>{middleColumn.title}</h3>
+            <h3 className={styles.columnTitle}>
+              {middleColumn.title.toUpperCase()}
+              <FontAwesomeIcon icon={faArrowRight} className={styles.arrow} />
+            </h3>
           )}
-          <ul className={styles.linkList}>
-            {middleColumn.links.map((link, index) => (
-              <li key={index}>
-                <FontAwesomeIcon
-                  icon={faCircle}
-                  className={styles.bulletPoint}
-                />
-                <Link href={link.url}>
-                  {link.text}
+          <ul
+            className={`${styles.linkList} ${
+              middleColumn.splitIntoColumns ? styles.twoColumns : ""
+            }`}
+          >
+            {middleColumn.splitIntoColumns && middleColumn.splitAt ? (
+              <>
+                <div className={styles.columnHalf}>
+                  {middleColumn.links
+                    .slice(0, middleColumn.splitAt)
+                    .map((link, index) => (
+                      <li key={index}>
+                        <FontAwesomeIcon
+                          icon={faCircle}
+                          className={styles.bulletPoint}
+                        />
+                        <Link
+                          href={link.url}
+                          className={link.isBold ? styles.boldLink : ""}
+                        >
+                          {link.text}
+                          {link.hasArrow && (
+                            <FontAwesomeIcon
+                              icon={faArrowRight}
+                              className={styles.linkArrow}
+                            />
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                </div>
+                <div className={styles.columnHalf}>
+                  {middleColumn.links
+                    .slice(middleColumn.splitAt)
+                    .map((link, index) => (
+                      <li key={index}>
+                        <FontAwesomeIcon
+                          icon={faCircle}
+                          className={styles.bulletPoint}
+                        />
+                        <Link
+                          href={link.url}
+                          className={link.isBold ? styles.boldLink : ""}
+                        >
+                          {link.text}
+                          {link.hasArrow && (
+                            <FontAwesomeIcon
+                              icon={faArrowRight}
+                              className={styles.linkArrow}
+                            />
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                </div>
+              </>
+            ) : (
+              middleColumn.links.map((link, index) => (
+                <li key={index}>
                   <FontAwesomeIcon
-                    icon={faArrowRight}
-                    className={styles.linkArrow}
+                    icon={faCircle}
+                    className={styles.bulletPoint}
                   />
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    href={link.url}
+                    className={link.isBold ? styles.boldLink : ""}
+                  >
+                    {link.text}
+                    {link.hasArrow && (
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={styles.linkArrow}
+                      />
+                    )}
+                  </Link>
+                </li>
+              ))
+            )}
           </ul>
         </div>
 
@@ -95,51 +164,74 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
 
         <div className={styles.rightSection}>
           {rightColumn.map((column, index) => (
-            <div key={index} className={styles.rightColumn}>
-              {column.type === "links" && (
-                <>
-                  {(column.content as LinkColumn).title && (
-                    <h3 className={styles.columnTitle}>
-                      {(column.content as LinkColumn).title}
-                    </h3>
-                  )}
-                  <ul className={styles.linkList}>
-                    {(column.content as LinkColumn).links.map(
-                      (link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <FontAwesomeIcon
-                            icon={faCircle}
-                            className={styles.bulletPoint}
-                          />
-                          <Link href={link.url}>
-                            {link.text}
-                            <FontAwesomeIcon
-                              icon={faArrowRight}
-                              className={styles.linkArrow}
-                            />
-                          </Link>
-                        </li>
-                      )
+            <React.Fragment key={index}>
+              <div className={styles.rightColumn}>
+                {column.type === "links" && (
+                  <>
+                    {(column.content as LinkColumn).title && (
+                      <h3 className={styles.columnTitle}>
+                        {(
+                          (column.content as LinkColumn).title || ""
+                        ).toUpperCase()}
+                        <FontAwesomeIcon
+                          icon={faArrowRight}
+                          className={styles.arrow}
+                        />
+                      </h3>
                     )}
-                  </ul>
-                </>
-              )}
-              {column.type === "image" && (
-                <div className={styles.imageColumn}>
-                  <img
-                    src={(column.content as ImageColumn).image}
-                    alt="Column illustration"
-                    className={styles.columnImage}
-                  />
-                  <h4 className={styles.imageTitle}>
-                    {(column.content as ImageColumn).title}
-                  </h4>
-                  <p className={styles.imageDescription}>
-                    {(column.content as ImageColumn).description}
-                  </p>
-                </div>
-              )}
-            </div>
+                    <ul
+                      className={`${styles.linkList} ${
+                        (column.content as LinkColumn).splitIntoColumns
+                          ? styles.twoColumns
+                          : ""
+                      }`}
+                    >
+                      {(column.content as LinkColumn).links.map(
+                        (link, linkIndex) => (
+                          <li key={linkIndex}>
+                            <FontAwesomeIcon
+                              icon={faCircle}
+                              className={styles.bulletPoint}
+                            />
+                            <Link
+                              href={link.url}
+                              className={link.isBold ? styles.boldLink : ""}
+                            >
+                              {link.text}
+                              {link.hasArrow && (
+                                <FontAwesomeIcon
+                                  icon={faArrowRight}
+                                  className={styles.linkArrow}
+                                />
+                              )}
+                            </Link>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </>
+                )}
+                {column.type === "image" && (
+                  <div className={styles.imageColumn}>
+                    <img
+                      src={(column.content as ImageColumn).image}
+                      alt="Column illustration"
+                      className={styles.columnImage}
+                    />
+                    <h4 className={styles.imageTitle}>
+                      {(column.content as ImageColumn).title}
+                    </h4>
+                    <p className={styles.imageDescription}>
+                      {(column.content as ImageColumn).description}
+                    </p>
+                  </div>
+                )}
+              </div>
+              {index < rightColumn.length - 1 &&
+                column.type !== rightColumn[index + 1].type && (
+                  <div className={styles.rightSectionDivider} />
+                )}
+            </React.Fragment>
           ))}
         </div>
       </div>

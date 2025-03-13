@@ -3,9 +3,13 @@ import BaseSubMenu from "../BaseSubMenu";
 
 interface SubMenuWhatWeDoProps {
   onClose: () => void;
+  isOpen: boolean;
 }
 
-const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({ onClose }) => {
+const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({
+  onClose,
+  isOpen,
+}) => {
   const mockData = {
     title: "What We Do",
     mainText:
@@ -13,17 +17,19 @@ const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({ onClose }) => {
 
     middleColumn: {
       title: "Capabilities",
+      splitIntoColumns: true,
+      splitAt: 4, // divide após o 4º item
       links: [
         {
           text: "Customer Strategy",
           url: "/services/digital-transformation",
         },
-        { text: "Scales", url: "/services/cloud" },
-        { text: "Marketing", url: "/services/custom-software" },
-        { text: "Business Growth", url: "/services/mobile" },
+        { text: "Scales", url: "/services/cloud", hasArrow: true },
+        { text: "Marketing", url: "/services/custom-software", hasArrow: true },
+        { text: "Business Growth", url: "/services/mobile", hasArrow: true },
         { text: "Digital Products", url: "/services/design" },
-        { text: "Data & AI", url: "/services/design" },
-        { text: "Technology", url: "/services/design" },
+        { text: "Data & AI", url: "/services/design", hasArrow: true },
+        { text: "Technology", url: "/services/design", hasArrow: true },
       ],
     },
     rightColumn: [
@@ -32,20 +38,51 @@ const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({ onClose }) => {
         content: {
           title: "Industries",
           links: [
-            { text: "Concumer & Retail", url: "/industries/healthcare" },
-            { text: "Financial Services", url: "/industries/healthcare" },
-            { text: "Energy & Commodities", url: "/industries/healthcare" },
+            {
+              text: "Concumer & Retail",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            {
+              text: "Financial Services",
+              url: "/industries/healthcare",
+              hasArrow: true,
+              isBold: true,
+            },
+            {
+              text: "Energy & Commodities",
+              url: "/industries/healthcare",
+              hasArrow: true,
+            },
             {
               text: "Healthcare & Life Sciences",
               url: "/industries/healthcare",
+              hasArrow: true,
+              isBold: true,
             },
-            { text: "Education", url: "/industries/healthcare" },
-            { text: "Media & Entertainment", url: "/industries/healthcare" },
-            { text: "Telecommunications", url: "/industries/healthcare" },
-            { text: "Software and Platforms", url: "/industries/healthcare" },
+            { text: "Education", url: "/industries/healthcare", isBold: true },
+            {
+              text: "Media & Entertainment",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            {
+              text: "Telecommunications",
+              url: "/industries/healthcare",
+              hasArrow: true,
+            },
+            {
+              text: "Software and Platforms",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
             { text: "Public Sector", url: "/industries/healthcare" },
-            { text: "Legal Services", url: "/industries/healthcare" },
-            { text: "Human Capital", url: "/industries/finance" },
+            {
+              text: "Legal Services",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            { text: "Human Capital", url: "/industries/finance", isBold: true },
             { text: "Travel & Hospitality", url: "/industries/retail" },
           ],
         },
@@ -69,6 +106,7 @@ const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({ onClose }) => {
       middleColumn={mockData.middleColumn}
       rightColumn={mockData.rightColumn}
       onClose={onClose}
+      isOpen={isOpen}
     />
   );
 };
