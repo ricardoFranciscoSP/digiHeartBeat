@@ -1,0 +1,26 @@
+.elementor-image-carousel-wrapper.swiper {
+  overflow: hidden;
+}
+
+.elementor-image-carousel.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.elementor-image-carousel .swiper-slide {
+  flex-shrink: 0;
+  width: calc((100% - 100px) / 6) !important;
+  margin-right: 20px;
+}
+
+@media (max-width: 1024px) {
+  .elementor-image-carousel .swiper-slide {
+    width: calc((100% - 60px) / 4) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-image-carousel .swiper-slide {
+    width: calc((100% - 20px) / 2) !important;
+  }
+}

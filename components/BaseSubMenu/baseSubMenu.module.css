@@ -1,0 +1,183 @@
+.submenuContainer {
+  position: absolute;
+  top: 102%;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.diamond1,
+.diamond2,
+.diamond3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #00ff0020;
+  transform: rotate(45deg);
+}
+
+.diamond1 {
+  top: -50px;
+  left: 10%;
+}
+
+.diamond2 {
+  top: 30%;
+  right: -30px;
+}
+
+.diamond3 {
+  bottom: -30px;
+  left: 40%;
+}
+
+.content {
+  display: flex;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.titleContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.redLine {
+  position: absolute;
+  top: -10px;
+  height: 2px;
+  background-color: #ff0000;
+  width: var(--title-width);
+  min-width: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  font-size: 1rem;
+  color: #ff0000;
+}
+
+.leftSection {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.middleSection {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.divider {
+  width: 1px;
+  background-color: #e0e0e0;
+  margin: 0 2rem;
+}
+
+.rightSection {
+  flex: 2;
+  display: flex;
+  gap: 2rem;
+}
+
+.rightColumn {
+  flex: 1;
+}
+
+.columnTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bulletPoint {
+  font-size: 0.4rem;
+  color: #666;
+}
+
+.linkList a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.linkList a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.linkArrow {
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.linkList a:hover .linkArrow {
+  opacity: 1;
+}
+
+.imageColumn {
+  text-align: right;
+}
+
+.columnImage {
+  width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.imageTitle {
+  color: #ff0000;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.imageDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

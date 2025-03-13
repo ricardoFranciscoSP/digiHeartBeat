@@ -7,9 +7,13 @@ import { client } from "../../lib/apollo";
 import { GET_MENU } from "../../lib/queries";
 import styles from "./header.module.css";
 
+import SubMenuWhatWeDo from "../SubMenuWhatWeDo";
+import SubMenuWhoWeAre from "../SubMenuWhoWeAre";
+
 const Header = () => {
   const [menus, setMenus] = useState([]);
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [language, setLanguage] = useState("EN");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // Novo estado para controlar a animação
@@ -57,6 +61,15 @@ const Header = () => {
     setShowLanguageMenu(!showLanguageMenu);
   };
 
+  const handleMenuClick = (menuLabel) => {
+    if (
+      menuLabel.toUpperCase() === "WHAT WE DO" ||
+      menuLabel.toUpperCase() === "WHO WE ARE"
+    ) {
+      setActiveSubmenu(activeSubmenu === menuLabel ? null : menuLabel);
+    }
+  };
+
   return (
     <header className={`${styles.header} ${isLoaded ? styles.loaded : ""}`}>
       {/* Menu para desktop */}
@@ -84,6 +97,15 @@ const Header = () => {
                         : ""
                     }`}
                     href={menu.url}
+                    onClick={(e) => {
+                      if (
+                        menu.label.toUpperCase() === "WHAT WE DO" ||
+                        menu.label.toUpperCase() === "WHO WE ARE"
+                      ) {
+                        e.preventDefault();
+                        handleMenuClick(menu.label);
+                      }
+                    }}
                   >
                     {menu.label}
                   </Link>
@@ -193,6 +215,12 @@ const Header = () => {
           </nav>
         )}
       </div>
+      {activeSubmenu &&
+        (activeSubmenu.toUpperCase() === "WHAT WE DO" ? (
+          <SubMenuWhatWeDo onClose={() => setActiveSubmenu(null)} />
+        ) : (
+          <SubMenuWhoWeAre onClose={() => setActiveSubmenu(null)} />
+        ))}
     </header>
   );
 };

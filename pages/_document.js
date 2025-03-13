@@ -73,44 +73,6 @@ class MyDocument extends Document {
           />
           <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer />
 
-          {/* TESTESSSSSSSS */}
-          {/* <script src="/scripts/carouselScripts-jqeury-3.7.1.js" defer></script>
-
-          <script
-            src="/scripts/carouselScripts-jquery-core-1.13.3.js"
-            defer
-          ></script>
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-      var elementorFrontendConfig = ${JSON.stringify(elementorFrontendConfig)};
-      window.elementorFrontendConfig = elementorFrontendConfig;
-    `,
-            }}
-          />
-
-          <script
-            src="/scripts/carouselScripts-frontend-modules.min-3.25.4.js"
-            defer
-          ></script>
-
-          <script
-            src="/scripts/carouselScripts-frontend.min-3.25.4.js"
-            defer
-          ></script>
-
-          <script
-            src="/scripts/carouselScripts-image-carousel.4455c6362492d9067512.js"
-            defer
-          ></script>
-
-          <script
-            src="/scripts/carouselScripts-webpack-3.25.4.js"
-            defer
-          ></script> */}
-          {/* TESTESSSSSSSS FIM */}
-
           {/* jQuery (necessário para o ElementsKit) */}
           <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer />
 
@@ -148,39 +110,8 @@ class MyDocument extends Document {
             href="https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css"
           />
 
-          {/* Estilos inline necessários */}
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-      .elementor-image-carousel-wrapper.swiper {
-        overflow: hidden;
-      }
-      
-      .elementor-image-carousel.swiper-wrapper {
-        display: flex;
-        transition: transform 0.3s ease;
-      }
-      
-      .elementor-image-carousel .swiper-slide {
-        flex-shrink: 0;
-        width: calc((100% - 100px) / 6) !important;
-        margin-right: 20px;
-      }
-      
-      @media (max-width: 1024px) {
-        .elementor-image-carousel .swiper-slide {
-          width: calc((100% - 60px) / 4) !important;
-        }
-      }
-      
-      @media (max-width: 767px) {
-        .elementor-image-carousel .swiper-slide {
-          width: calc((100% - 20px) / 2) !important;
-        }
-      }
-    `,
-            }}
-          />
+          {/* Estilos customizados do Swiper */}
+          <link rel="stylesheet" href="/styles/swiper-styles.css" />
 
           {/* Scripts necessários na ordem correta */}
           <script
@@ -200,61 +131,8 @@ class MyDocument extends Document {
             defer
           />
 
-          {/* Script de inicialização do Swiper */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-        window.addEventListener('load', function() {
-          setTimeout(function() {
-            const swiperElement = document.querySelector('.elementor-image-carousel-wrapper');
-            if (swiperElement && typeof Swiper !== 'undefined') {
-              const swiper = new Swiper(swiperElement, {
-                slidesPerView: 6,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                  delay: 3000,
-                  disableOnInteraction: false,
-                },
-                navigation: {
-                  nextEl: '.elementor-swiper-button-next',
-                  prevEl: '.elementor-swiper-button-prev',
-                },
-                pagination: {
-                  el: '.swiper-pagination',
-                  clickable: true,
-                },
-                breakpoints: {
-                  320: {
-                    slidesPerView: 2,
-                    spaceBetween: 10
-                  },
-                  768: {
-                    slidesPerView: 4,
-                    spaceBetween: 15
-                  },
-                  1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 20
-                  }
-                },
-                on: {
-                  init: function() {
-                    console.log('Swiper initialized');
-                  },
-                  slideChange: function() {
-                    console.log('Slide changed');
-                  }
-                }
-              });
-            } else {
-              console.log('Swiper element not found or Swiper not loaded');
-            }
-          }, 1000); // Aguarda 1 segundo após o carregamento da página
-        });
-      `,
-            }}
-          />
+          {/* Script de configuração do Swiper */}
+          <script src="/scripts/swiper-config.js" defer />
 
           {/* SCRIPT-----------------> */}
           <link
