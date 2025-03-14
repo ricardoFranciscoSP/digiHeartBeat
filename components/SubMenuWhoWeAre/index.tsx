@@ -15,7 +15,6 @@ const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({
     mainText:
       "Digi Heart Beat is your global partner in full-spectrum digital evolution, providing integrated solutions that combine strategy, tecnology, and data-driven insights, all guided by human-centric approaches.",
     middleColumn: {
-      title: "About Us",
       splitIntoColumns: true,
       splitAt: 4,
       links: [

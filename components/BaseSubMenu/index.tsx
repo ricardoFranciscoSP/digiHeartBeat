@@ -72,11 +72,16 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
         </div>
 
         <div className={styles.middleSection}>
-          {middleColumn.title && (
+          {middleColumn.title ? (
             <h3 className={styles.columnTitle}>
               {middleColumn.title.toUpperCase()}
               <FontAwesomeIcon icon={faArrowRight} className={styles.arrow} />
             </h3>
+          ) : (
+            <>
+              {" "}
+              <h3> </h3>
+            </>
           )}
           <ul
             className={`${styles.linkList} ${
