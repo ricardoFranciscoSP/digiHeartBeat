@@ -13,15 +13,18 @@ const SubMenuWhoWeAre: React.FC<SubMenuWhoWeAreProps> = ({
   const mockData = {
     title: "Who We Are",
     mainText:
-      "Learn about our company culture, values, and the passionate team behind our success story.",
+      "Digi Heart Beat is your global partner in full-spectrum digital evolution, providing integrated solutions that combine strategy, tecnology, and data-driven insights, all guided by human-centric approaches.",
     middleColumn: {
       title: "About Us",
+      splitIntoColumns: true,
+      splitAt: 4,
       links: [
-        { text: "Our Story", url: "/about/story" },
-        { text: "Mission & Vision", url: "/about/mission" },
-        { text: "Core Values", url: "/about/values" },
-        { text: "Leadership Team", url: "/about/leadership" },
-        { text: "Global Presence", url: "/about/global" },
+        { text: "Our Difference", url: "/about/story", hasArrow: true },
+        { text: "Our Work", url: "/about/mission", hasArrow: true },
+        { text: "Our People", url: "/about/values" },
+        { text: "Our Alliances", url: "/about/leadership" },
+        { text: "Contact US", url: "/about/global", hasArrow: true },
+        { text: "Carreers", url: "/about/global", hasArrow: true },
       ],
     },
     rightColumn: [

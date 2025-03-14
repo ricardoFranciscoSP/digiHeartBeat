@@ -57,7 +57,6 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
       <div className={styles.background}>
         <div className={styles.diamond1} />
         <div className={styles.diamond2} />
-        <div className={styles.diamond3} />
       </div>
 
       <div className={styles.content}>

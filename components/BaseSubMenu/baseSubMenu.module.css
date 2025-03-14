@@ -3,6 +3,7 @@
   top: 102%;
   left: 0;
   width: 100%;
+  min-height: 554px;
   background: white;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -29,28 +30,27 @@
 }
 
 .diamond1,
-.diamond2,
-.diamond3 {
+.diamond2 {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #00ff0020;
-  transform: rotate(45deg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .diamond1 {
-  top: -50px;
-  left: 10%;
+  top: 180px;
+  left: 12%;
+  background-image: url("https://digi.maneiraweb.com.br/wp-content/uploads/2025/01/duplo-cruzado-verde-1.png");
 }
 
 .diamond2 {
-  top: 30%;
-  right: -30px;
-}
-
-.diamond3 {
-  bottom: -30px;
-  left: 40%;
+  bottom: 45px;
+  left: 42%;
+  background-image: url("https://digi.maneiraweb.com.br/wp-content/uploads/2025/01/duplo-cruzado-verde-1.png");
+  width: 155px;
+  height: 155px;
 }
 
 .content {
