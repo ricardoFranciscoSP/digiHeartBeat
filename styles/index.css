@@ -324,11 +324,15 @@ img.attachment-full.size-full.wp-image-157 {
   max-width: var(--content-width);
   margin: 0 auto;
   /* margin-top: -520px; */
+  max-width: var(--content-width);
+  margin: 0 auto;
+  /* margin-top: -520px; */
   position: relative;
   overflow: hidden;
 }
 
 .nuvem {
+  /* margin-top: -50px; */
   /* margin-top: -50px; */
   width: 100%;
 }
@@ -340,6 +344,8 @@ img.attachment-full.size-full.wp-image-157 {
 
 /* Estilos imagem bloco connect */
 img.attachment-medium_large.size-medium_large.wp-image-176 {
+  width: 290px !important;
+  margin-top: -70px;
   width: 290px !important;
   margin-top: -70px;
   margin-left: 2px;
