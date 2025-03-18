@@ -1,0 +1,27 @@
+.elementor-8 .elementor-element.elementor-element-9611ea4 {
+  --width: 28%;
+  min-width: 524px;
+}
+
+.elementor-8 .elementor-element.elementor-element-5303a84 {
+  font-size: 1rem;
+}
+
+.elementor-8 .elementor-element.elementor-element-39a8f89,
+.elementor-8 .elementor-element.elementor-element-e23bca3 {
+  --width: 100%;
+}
+
+@media (min-width: 768px) {
+  .elementor-8 .elementor-element.elementor-element-9611ea4 {
+    --width: 28%;
+    min-width: 524px;
+  }
+}
+
+@media (max-width: 1330px) {
+  .elementor-8 .elementor-element.elementor-element-5303a84 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

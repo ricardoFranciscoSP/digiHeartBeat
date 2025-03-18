@@ -1,5 +1,7 @@
 #section-business-pulse {
   background-color: #fff;
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
 
 .elementor-element.elementor-element-0e12c05.e-con-full.e-flex.e-con.e-child {
@@ -13,17 +15,20 @@ div#business-pulse-text {
 @media screen and (min-width: 1280px) {
   div#business-pulse-text
     .elementor-element.elementor-element-69d7cb5.elementor-widget.elementor-widget-text-editor {
-    font-size: 20px;
-    line-height: 36px;
+    /* font-size: 20px;
+    line-height: 36px; */
+
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 
   div#business-pulse-text h2.elementor-heading-title.elementor-size-default {
-    font-size: 52px;
+    font-size: 36px;
   }
 
   div#text-nuvem-desktop {
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -102,5 +107,15 @@ div#business-pulse-content-image-woman {
 
   img.attachment-full.size-full.wp-image-24 {
     scale: 140%;
+  }
+}
+
+@media (min-width: 768px) {
+  .elementor-8 .elementor-element.elementor-element-e1c867f {
+    --width: 63%;
+  }
+
+  .elementor-8 .elementor-element.elementor-element-462a26f {
+    --width: 37%;
   }
 }

@@ -10,9 +10,12 @@
 
 #section-customer::before {
   background-image: url(https://digi.maneiraweb.com.br/wp-content/uploads/2024/10/imagem2.png);
-  background-position: 1300% 165%;
+
+  /* background-position: 1300% 165%; */
+  background-position: 100px 275px;
+
   background-repeat: no-repeat;
-  background-size: 99% auto;
+  background-size: 112% auto;
   content: "";
   position: absolute;
   top: -130px;
@@ -26,7 +29,10 @@
   position: relative;
   height: 1500px;
   overflow: visible;
-  margin-top: 10px;
+
+  max-width: min(100%, 1340px);
+  /* var(--content-width); */
+  margin: 0 auto;
 }
 
 .background {
@@ -43,7 +49,7 @@
   background: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: 2px solid #f0f0f0;
-  padding: 40px 30px;
+  padding: 40px 25px;
   border-radius: 15px;
   position: relative;
   width: 300px;
@@ -63,8 +69,8 @@
 }
 
 .card-text {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #666;
   margin: 20px 0;
   font-family: var(--font-family);
@@ -100,7 +106,7 @@
 /* Container principal */
 div#section-customer .e-con-inner {
   max-width: 1400px;
-  padding-top: 190px;
+  padding: 190px 70px 0px 70px;
   justify-content: space-between;
 }
 
@@ -120,27 +126,28 @@ div#section-customer .e-con-inner {
 #card4 {
   opacity: 0;
   transition: all 0.8s ease-out;
+  gap: 3px;
 }
 
 /* Posições finais dos cards */
 #card1 {
   transform: translateY(0);
-  width: 22%;
+  width: 23%;
 }
 
 #card2 {
-  transform: translateY(110px);
-  width: 22%;
+  transform: translateY(95px);
+  width: 23%;
 }
 
 #card3 {
-  transform: translateY(325px);
-  width: 22%;
+  transform: translateY(310px);
+  width: 23%;
 }
 
 #card4 {
-  transform: translateY(425px);
-  width: 22%;
+  transform: translateY(410px);
+  width: 23%;
 }
 
 /* Classes de animação */
@@ -153,13 +160,13 @@ div#section-customer .e-con-inner {
   transform: translateY(0) !important;
 }
 #card2.fade-in-up {
-  transform: translateY(110px) !important;
+  transform: translateY(70px) !important;
 }
 #card3.fade-in-up {
-  transform: translateY(325px) !important;
+  transform: translateY(265px) !important;
 }
 #card4.fade-in-up {
-  transform: translateY(425px) !important;
+  transform: translateY(310px) !important;
 }
 
 /* Estilos de texto */
@@ -185,7 +192,7 @@ div#section-customer .e-con-inner {
 .redText {
   font-family: "Isidora";
   color: #b30404;
-  font-size: 39px;
+  font-size: 2rem;
   font-weight: 700;
   display: block;
   line-height: 1.2;
@@ -358,6 +365,10 @@ div#section-customer .e-con-inner {
 @media (max-width: 1200px) {
   .cardCustom {
     width: 250px;
+  }
+
+  #section-customer::before {
+    background-position: 1300% 65%;
   }
 }
 

@@ -1,5 +1,7 @@
 import "../styles/index.css";
 import "../styles/section-business-pulse.css";
+import "../styles/section-connecting-dots.css";
+
 // import "../styles/swiper.css";
 import "../styles/section-cards.css";
 import "../styles/wp-testimonial.css";

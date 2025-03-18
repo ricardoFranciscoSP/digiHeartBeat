@@ -325,7 +325,7 @@
 .elementor-lightbox.elementor-arrows-position-outside
   .swiper
   ~ .elementor-swiper-button-prev {
-  left: -98px;
+  left: -62px;
 }
 
 .elementor-element.elementor-arrows-position-outside
@@ -352,7 +352,7 @@
 .elementor-lightbox.elementor-arrows-position-outside
   .swiper
   ~ .elementor-swiper-button-next {
-  right: -98px;
+  right: -62px;
 }
 
 .title-slider h2.elementor-heading-title.elementor-size-default {
@@ -397,11 +397,11 @@
 }
 
 .swiper-button-prev {
-  left: -80px !important;
+  left: -50px !important;
 }
 
 .swiper-button-next {
-  right: -80px !important;
+  right: -50px !important;
 }
 
 .swiper-button-disabled {
@@ -425,4 +425,11 @@
 
 .elementor-widget-elementskit-testimonial {
   padding: 0 !important;
+}
+
+.elementor-element.elementor-element-4ee424b5.e-flex.e-con-boxed.e-con.e-child,
+.elementor-element.elementor-element-7c3fabb7.e-flex.e-con-boxed.e-con.e-child,
+.elementor-element.elementor-element-e996318.e-flex.e-con-boxed.e-con.e-child {
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
