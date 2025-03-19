@@ -320,6 +320,25 @@ img.attachment-full.size-full.wp-image-157 {
 }
 
 /* Estilos imagem bloco connect nuvem */
+#losango-right-element {
+  width: 480px !important;
+  position: absolute;
+  top: 100px;
+  right: -240px;
+}
+
+#losango-green {
+  position: absolute;
+  top: 173%;
+  right: -25%;
+  width: 33%;
+}
+#bold-vermelho {
+  position: absolute;
+  top: 437%;
+  width: 14%;
+  left: -8%;
+}
 #content-nuvem-losango-sombra {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -330,7 +349,18 @@ img.attachment-full.size-full.wp-image-157 {
   position: relative;
   overflow: hidden;
 }
-
+#duplo-cruzado-verde {
+  top: 368%;
+  left: 1%;
+  width: 18%;
+  position: absolute;
+}
+#forma-cinza {
+  top: 445%;
+  width: 8%;
+  position: absolute;
+  right: 3%;
+}
 .nuvem {
   /* margin-top: -50px; */
   /* margin-top: -50px; */

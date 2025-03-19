@@ -1,8 +1,8 @@
 // components/Layout.js
-import Head from 'next/head';
-import Footer from '../Footer';
-import styles from './Layout.module.css';
-import Header from '../Header';
+import Head from "next/head";
+import Footer from "../Footer";
+import Header from "../Header";
+import styles from "./Layout.module.css";
 
 export default function Layout({ children, title = "Default Title" }) {
   return (
@@ -12,9 +12,7 @@ export default function Layout({ children, title = "Default Title" }) {
       </Head>
       <div className={styles.container}>
         <Header />
-        <main className={styles.mainContent}>
-          {children}
-        </main>
+        <main className={styles.mainContent}>{children}</main>
         <Footer />
       </div>
     </>
