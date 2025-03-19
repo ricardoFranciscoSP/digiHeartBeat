@@ -61,27 +61,23 @@ const Footer = () => {
             </div>
           </div>
 
-        <div className={styles.column}>
-          {/* Terceira coluna: Links inline com separação por pipes */}
-          <div className={styles.inlineLinks}>
-            <a href="#">About Us</a>
-            <span>|</span>
-            <a href="#">Services</a>
-            <span>|</span>
-            <a href="#">Contact Us</a>
+          <div className={styles.column}>
+            {/* Terceira coluna: Links inline com separação por pipes */}
+            <div className={styles.inlineLinks}>
+              <a href="#">About Us</a>
+              <span>|</span>
+              <a href="#">Services</a>
+              <span>|</span>
+              <a href="#">Contact Us</a>
+              <span>|</span>
+              <a href="#">Privacy & Legal</a>
+              <span>|</span>
+              <a href="#">Accessibility</a>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.column}>
-          {/* Quarta coluna: Links inline separados por pipes */}
-          <div className={styles.inlineLinks}>
-            <a href="#">Privacy & Legal</a>
-            <span>|</span>
-            <a href="#">Accessibility</a>
-          </div>
-        </div>
-      </footer>
-    </section>
+        </footer>
+      </section>
+    </>
   );
 };
 
