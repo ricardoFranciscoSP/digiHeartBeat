@@ -333,12 +333,40 @@ img.attachment-full.size-full.wp-image-157 {
   right: -25%;
   width: 33%;
 }
-#bold-vermelho {
+/*losangolo duplo verde*/
+.elementor-element-1bb6083 {
   position: absolute;
-  top: 437%;
-  width: 14%;
-  left: -8%;
 }
+.elementor-element-46af73b {
+  position: absolute;
+  width: 190px;
+  top: -150px;
+}
+
+/*losangolo vermelho canto*/
+.elementor-element-31507c9 {
+  position: absolute;
+}
+
+.elementor-element-0265988 {
+  position: absolute;
+  top: 340px;
+  left: -122px;
+}
+/*losango cinza*/
+.elementor-element-b43a703 {
+  position: absolute;
+  right: 0;
+}
+.wp-image-685 {
+  width: 100px !important;
+}
+.elementor-element-1ba4ef1 {
+  position: absolute;
+  top: 410px;
+  left: -30px;
+}
+
 #content-nuvem-losango-sombra {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -349,18 +377,7 @@ img.attachment-full.size-full.wp-image-157 {
   position: relative;
   overflow: hidden;
 }
-#duplo-cruzado-verde {
-  top: 368%;
-  left: 1%;
-  width: 18%;
-  position: absolute;
-}
-#forma-cinza {
-  top: 445%;
-  width: 8%;
-  position: absolute;
-  right: 3%;
-}
+
 .nuvem {
   /* margin-top: -50px; */
   /* margin-top: -50px; */
