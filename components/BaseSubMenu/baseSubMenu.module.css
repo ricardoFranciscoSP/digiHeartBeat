@@ -41,14 +41,14 @@
 
 .diamond1 {
   top: 180px;
-  left: 12%;
+  left: -40px;
   background-image: url("https://digi.maneiraweb.com.br/wp-content/uploads/2025/01/duplo-cruzado-verde-1.png");
 }
 
 .diamond2 {
   bottom: 45px;
   left: 42%;
-  background-image: url("https://digi.maneiraweb.com.br/wp-content/uploads/2025/01/duplo-cruzado-verde-1.png");
+  background-image: url("https://digi.maneiraweb.com.br/wp-content/uploads/2025/03/cruzado-verde.png");
   width: 155px;
   height: 155px;
 }
