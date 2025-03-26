@@ -371,15 +371,11 @@ img.attachment-full.size-full.wp-image-157 {
   max-width: var(--content-width);
   margin: 0 auto;
   /* margin-top: -520px; */
-  max-width: var(--content-width);
-  margin: 0 auto;
-  /* margin-top: -520px; */
   position: relative;
   overflow: hidden;
 }
 
 .nuvem {
-  /* margin-top: -50px; */
   /* margin-top: -50px; */
   width: 100%;
 }
@@ -393,16 +389,48 @@ img.attachment-full.size-full.wp-image-157 {
 img.attachment-medium_large.size-medium_large.wp-image-176 {
   width: 290px !important;
   margin-top: -70px;
-  width: 290px !important;
-  margin-top: -70px;
   margin-left: 2px;
 }
 
 @media (max-width: 1968px) {
   img.attachment-medium_large.size-medium_large.wp-image-176 {
-    width: 55% !important;
-    margin-top: -300px;
+    width: 290px !important;
+    margin-top: -70px;
     margin-left: 2px;
+  }
+
+  #content-nuvem-losango-sombra {
+    margin-top: -275px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #slogan-cloud .super-title {
+    font-size: 50px;
+    margin-top: 220px;
+  }
+
+  #text-nuvem-desktop {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1196px) {
+  img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 48% !important;
+    margin-top: -70px;
+    margin-left: 2px;
+  }
+
+  /* #content-nuvem-losango-sombra {
+    margin-top: -320px;
+    position: relative;
+    overflow: hidden;
+  } */
+
+  #slogan-cloud .super-title {
+    font-size: 50px;
+    margin-top: 220px;
   }
 }
 
