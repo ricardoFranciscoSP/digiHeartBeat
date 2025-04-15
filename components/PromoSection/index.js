@@ -21,11 +21,13 @@ const PromoSection = () => {
         <div className={styles.signupContent}>
           <div className={styles.signupText}>
             <i
-              className={`fa-regular fa-envelope-open ${styles.iconBlack} ${styles.iconSizeMd}`}
+              className={`fa-regular fa-envelope-open ${styles.iconBlack} ${styles.iconSizeMd} ${styles.iconMobile}`}
             ></i>
 
             <h2 className={`${styles.titleMedium}`}>
-              Prepare-se para um mundo em constante <br /> Transformação.
+              Prepare-se para um mundo em constante{" "}
+              <br className={`${styles.signupTextMediumBrMobile}`} />{" "}
+              Transformação.
             </h2>
             <p className={`${styles.subtitleMedium}`}>
               Inscreva-se para receber nossos conteúdos.

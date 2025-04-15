@@ -1,66 +1,70 @@
 /* home.module.css */
 .container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /* Garante que o container ocupe pelo menos a altura da tela */
-    overflow-x: hidden; /* Remove a rolagem lateral */
-    height: auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Garante que o container ocupe pelo menos a altura da tela */
+  overflow-x: hidden; /* Remove a rolagem lateral */
+  height: auto;
 }
 
 .bannerContainer {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* O banner ocupa 80% da tela */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80vh; /* O banner ocupa 80% da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .conteudo {
-    width: 100%;
-    display: flex;
-    height: auto;
+  /* width: 100%; */
+  display: flex;
+  height: auto;
 }
 
 .loadingContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Centraliza verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centraliza verticalmente */
 }
 
 .loadingSpinner {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ScrollDownIcon.module.css */
 .iconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    top: calc(80vh + 40px); /* 40px abaixo do banner */
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: calc(80vh + 40px); /* 40px abaixo do banner */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .icon {
-    color: #000; /* Alterar a cor conforme necessário */
-    transition: transform 0.3s ease;
+  color: #000; /* Alterar a cor conforme necessário */
+  transition: transform 0.3s ease;
 }
 
 .iconContainer:hover .icon {
-    transform: translateY(5px);
+  transform: translateY(5px);
 }

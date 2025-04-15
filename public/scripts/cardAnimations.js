@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Função para verificar se elemento está visível na viewport
+  // Função para verificar se elemento está parcialmente visível na viewport
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+
+    // Verifica se o elemento está parcialmente visível
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top <= windowHeight * 0.8 && // 80% da altura da janela
+      rect.left <= windowWidth &&
+      rect.bottom >= 0 &&
+      rect.right >= 0
     );
   }
 
@@ -15,25 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
   function animateAllCards() {
     const cards = document.querySelectorAll("#card1, #card2, #card3, #card4");
     cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add("fade-in-up");
-      }, index * 200); // Delay entre cada card
+      if (!card.classList.contains("fade-in-up")) {
+        setTimeout(() => {
+          card.classList.add("fade-in-up");
+        }, index * 200);
+      }
     });
   }
 
-  // Função para verificar o primeiro card e animar todos
-  function checkFirstCardAndAnimate() {
-    const firstCard = document.querySelector("#card1");
-    if (firstCard && isElementInViewport(firstCard)) {
+  // Função para verificar os cards e animar
+  function checkCardsAndAnimate() {
+    const cards = document.querySelectorAll("#card1, #card2, #card3, #card4");
+    let shouldAnimate = false;
+
+    cards.forEach((card) => {
+      if (isElementInViewport(card)) {
+        shouldAnimate = true;
+      }
+    });
+
+    if (shouldAnimate) {
       animateAllCards();
-      // Remove o listener após a animação
-      window.removeEventListener("scroll", checkFirstCardAndAnimate);
     }
   }
 
-  // Adiciona listener para scroll
-  window.addEventListener("scroll", checkFirstCardAndAnimate);
+  // Adiciona listeners para scroll e resize
+  window.addEventListener("scroll", checkCardsAndAnimate);
+  window.addEventListener("resize", checkCardsAndAnimate);
 
   // Verifica posição inicial
-  checkFirstCardAndAnimate();
+  checkCardsAndAnimate();
 });

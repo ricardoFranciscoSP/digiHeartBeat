@@ -1,0 +1,356 @@
+@media (max-width: 1280px) {
+  .elementor-8 .elementor-element.elementor-element-9383a9a img {
+    z-index: 9999 !important;
+  }
+  img.attachment-full.size-full.wp-image-157 {
+    margin-top: -300px; /* Ajuste conforme necessário */
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1366px) {
+  .elementor-8 .elementor-element.elementor-element-9383a9a img {
+    z-index: 9999 !important;
+  }
+  img.attachment-full.size-full.wp-image-157 {
+    margin-top: -300px; /* Ajuste conforme necessário */
+    z-index: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  img.attachment-full.size-full.wp-image-157 {
+    margin-top: -100px; /* Ajuste conforme necessário */
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Estilos específicos para dispositivos Mac */
+  .elementor-8 .elementor-element.elementor-element-9383a9a img {
+    z-index: 9999 !important;
+  }
+  img.attachment-full.size-full.wp-image-157 {
+    margin-top: -250px; /* Ajuste conforme necessário */
+  }
+}
+
+@media (max-width: 1968px) {
+  img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 290px !important;
+    margin-top: -70px;
+    margin-left: 2px;
+  }
+
+  #content-nuvem-losango-sombra {
+    margin-top: -275px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #slogan-cloud .super-title {
+    font-size: 50px;
+    margin-top: 220px;
+  }
+
+  #text-nuvem-desktop {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1196px) {
+  img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 48% !important;
+    margin-top: -70px;
+    margin-left: 2px;
+  }
+
+  /* #content-nuvem-losango-sombra {
+    margin-top: -320px;
+    position: relative;
+    overflow: hidden;
+  } */
+
+  #slogan-cloud .super-title {
+    font-size: 50px;
+    margin-top: 220px;
+  }
+
+  /*losangolo duplo verde*/
+  .elementor-element-1bb6083 {
+    position: absolute;
+  }
+  .elementor-element-46af73b {
+    position: absolute;
+    width: 160px;
+    top: -100px;
+  }
+
+  /*losangolo vermelho canto*/
+  .elementor-element-31507c9 {
+    position: absolute;
+    width: 140px;
+  }
+
+  .elementor-element-0265988 {
+    position: absolute;
+    top: 450px;
+    left: -82px;
+  }
+  /*losango cinza*/
+  .elementor-element-b43a703 {
+    position: absolute;
+    right: 0;
+  }
+  .wp-image-685 {
+    width: 60px !important;
+  }
+  .elementor-element-1ba4ef1 {
+    position: absolute;
+    top: 490px;
+    left: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 50% !important;
+    margin-top: -150px;
+    margin-right: 150px;
+  }
+  /*responsivade titulo */
+  .elementor-element-56037aa {
+    display: flex;
+    flex-direction: column !important;
+    padding-top: 190px;
+    margin-bottom: -130px;
+  }
+  #content-nuvem-losango-sombra {
+    margin-top: -225px;
+    position: relative;
+    overflow: hidden;
+  }
+  .super-title {
+    margin-top: 40px;
+  }
+  .elementor-element-0833653 {
+    margin: 0 150px;
+    text-align: start !important;
+  }
+  .elementor-element-69d7cb5 {
+    margin-right: 15px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 830px) {
+  .footer_contentLinks__Q4bvP {
+    flex-wrap: wrap;
+  }
+
+  .footer_inlineLinks__rV7Yr {
+    margin-top: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  img.attachment-medium_large.size-medium_large.wp-image-176 {
+    width: 70% !important;
+    margin-top: -100px;
+    margin-right: 50px;
+  }
+  .elementor-element-0833653 {
+    margin: 0 100px;
+    text-align: start !important;
+  }
+  #content-nuvem-losango-sombra {
+    margin-top: -175px;
+    position: relative;
+    overflow: hidden;
+  }
+  .elementor-element-69d7cb5 {
+    margin-right: 0px;
+  }
+
+  img.attachment-full.size-full.wp-image-157 {
+    margin-top: -200px; /* Ajuste conforme necessário */
+  }
+
+  .elementor-element.elementor-element-0e12c05.e-con-full.e-flex.e-con.e-child {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div#business-pulse-text {
+    width: 100%;
+  }
+
+  div#business-pulse-content-image-woman {
+    width: 80%;
+  }
+
+  div#business-pulse-btn-more {
+    display: flex;
+    justify-content: center;
+  }
+
+  #slogan-cloud .super-title {
+    font-size: 30px;
+    margin-top: 270px;
+    flex-wrap: wrap;
+  }
+
+  .elementor-element.elementor-element-46af73b.elementor-widget__width-initial.elementor-widget.elementor-widget-image {
+    width: 151px;
+  }
+
+  div#text-nuvem-mobile {
+    font-size: 14px;
+  }
+
+  .elementor-element.elementor-arrows-position-outside
+    .swiper-container
+    .elementor-swiper-button-prev,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper-container
+    ~ .elementor-swiper-button-prev,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper
+    .elementor-swiper-button-prev,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper
+    ~ .elementor-swiper-button-prev,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper-container
+    .elementor-swiper-button-prev,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper-container
+    ~ .elementor-swiper-button-prev,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper
+    .elementor-swiper-button-prev,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper
+    ~ .elementor-swiper-button-prev {
+    left: -12px !important;
+  }
+
+  .elementor-element.elementor-arrows-position-outside
+    .swiper-container
+    .elementor-swiper-button-next,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper-container
+    ~ .elementor-swiper-button-next,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper
+    .elementor-swiper-button-next,
+  .elementor-element.elementor-arrows-position-outside
+    .swiper
+    ~ .elementor-swiper-button-next,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper-container
+    .elementor-swiper-button-next,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper-container
+    ~ .elementor-swiper-button-next,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper
+    .elementor-swiper-button-next,
+  .elementor-lightbox.elementor-arrows-position-outside
+    .swiper
+    ~ .elementor-swiper-button-next {
+    right: -12px !important;
+  }
+
+  .testimonial-text-unit {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 714px) {
+  #slogan-cloud .super-title {
+    margin-top: 280px;
+  }
+
+  .elementor-element-56037aa {
+    margin-bottom: 50px;
+  }
+
+  .header_icons__Q5Pv3 {
+    margin-right: 0px !important;
+  }
+}
+
+@media (max-width: 652px) {
+  #slogan-cloud .super-title {
+    margin-top: 290px;
+  }
+
+  .elementor-element-56037aa {
+    padding-top: 240px;
+  }
+
+  #content-nuvem-losango-sombra {
+    margin-top: -125px;
+  }
+}
+
+@media (max-width: 585px) {
+  #losango-right-element,
+  .content-losango-mobile-none,
+  .elementor-element.elementor-element-39a8f89.e-con-full.content-losango-mobile-none.e-flex.e-con.e-child,
+  div#content-nuvem-losango-sombra,
+  div#float-losango-1,
+  .elementor-element.elementor-element-39a8f89.e-con-full.content-losango-mobile-none.e-flex.e-con.e-child {
+    /* display: none; */
+  }
+
+  .elementor-8 .elementor-element.elementor-element-9611ea4 {
+    min-width: fit-content !important;
+  }
+
+  .destaque {
+    color: #b30404;
+    -webkit-text-stroke: 0.2px black; /* Reduzido de 0.3px para 0.2px */
+    text-shadow: -0.5px -0.5px 0 #000,
+      /* Reduzido de 1px para 0.5px */ 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000;
+  }
+
+  .elementor-element-0833653 {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 483px) {
+  #content-nuvem-losango-sombra {
+    margin-top: -95px;
+  }
+
+  #slogan-cloud .super-title {
+    margin-top: 310px;
+    padding: 0 20px;
+  }
+
+  .elementor-element-56037aa {
+    padding-top: 270px;
+  }
+}
+
+@media (max-width: 389px) {
+  #content-nuvem-losango-sombra {
+    margin-top: -45px;
+  }
+
+  #slogan-cloud .super-title {
+    margin-top: 360px;
+    padding: 0 20px;
+  }
+
+  .elementor-element-56037aa {
+    padding-top: 350px;
+  }
+}

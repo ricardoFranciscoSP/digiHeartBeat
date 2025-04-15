@@ -139,6 +139,10 @@
   font-size: 24px;
 }
 
+.iconMobile {
+  display: block;
+}
+
 .buttonPrimary {
   background-color: var(--color-white);
   color: var(--color-black);
@@ -185,23 +189,28 @@
 
   .signupText {
     flex: 0 0 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .signupForm {
     flex: 0 0 100%;
     align-items: center;
+    gap: 15px;
   }
 
   .signupForm label,
   .signupForm input,
   .submitButton {
-    width: 100%;
     text-align: center;
   }
 
-  .email {
+  .email,
+  .fieldForm {
     width: 100%;
+  }
+
+  .signupForm {
+    margin-top: 0px !important;
   }
 
   .submitButton {
@@ -219,13 +228,30 @@
 
   .promoContent p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  .titleMedium {
+    font-size: 20px;
   }
 
   .promoButton {
     font-size: 18px;
     padding: 10px 20px;
     width: 80%;
+  }
+
+  .signupSection {
+    margin: 40px 0 10px;
+  }
+  .promoContentUnique {
+    margin-top: 80px;
+    margin-bottom: 110px;
+  }
+
+  .iconMobile,
+  .signupTextMediumBrMobile {
+    display: none;
   }
 }
 

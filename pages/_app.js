@@ -1,11 +1,9 @@
 import "../styles/index.css";
+import "../styles/responsible.css";
 import "../styles/section-business-pulse.css";
 import "../styles/section-connecting-dots.css";
 
 // import "../styles/swiper.css";
-import "../styles/section-cards.css";
-import "../styles/wp-testimonial.css";
-
 import { ApolloProvider } from "@apollo/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
@@ -13,6 +11,10 @@ import LoadingComponent from "../components/Loading";
 import { IdProvider } from "../context/idContext";
 import { client } from "../lib/apollo";
 import { GET_PAGE_ID_BY_SLUG } from "../lib/queries";
+
+import "../styles/dpr-styles.css";
+import "../styles/section-cards.css";
+import "../styles/wp-testimonial.css";
 
 function MyApp({ Component, pageProps, id }) {
   const [animationEnded, setAnimationEnded] = useState(false);

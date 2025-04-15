@@ -1,0 +1,219 @@
+/* Estilos base para DPR = 1 */
+:root {
+  --dpr-base: 1;
+}
+
+/* Ajustes para DPR >= 1.5 */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  :root {
+    --dpr-base: 1.5;
+  }
+
+  /* Media query específica para largura máxima de 1024px com DPR >= 1.5 */
+  @media (max-width: 1024px) {
+    .elementor-element.elementor-arrows-position-outside
+      .swiper-container
+      .elementor-swiper-button-prev,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper-container
+      ~ .elementor-swiper-button-prev,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper
+      .elementor-swiper-button-prev,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper
+      ~ .elementor-swiper-button-prev,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper-container
+      .elementor-swiper-button-prev,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper-container
+      ~ .elementor-swiper-button-prev,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper
+      .elementor-swiper-button-prev,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper
+      ~ .elementor-swiper-button-prev,
+    .swiper-button-prev {
+      left: -8px !important;
+    }
+
+    .elementor-element.elementor-arrows-position-outside
+      .swiper-container
+      .elementor-swiper-button-next,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper-container
+      ~ .elementor-swiper-button-next,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper
+      .elementor-swiper-button-next,
+    .elementor-element.elementor-arrows-position-outside
+      .swiper
+      ~ .elementor-swiper-button-next,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper-container
+      .elementor-swiper-button-next,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper-container
+      ~ .elementor-swiper-button-next,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper
+      .elementor-swiper-button-next,
+    .elementor-lightbox.elementor-arrows-position-outside
+      .swiper
+      ~ .elementor-swiper-button-next,
+    .swiper-button-next {
+      right: -8px !important;
+    }
+
+    .testimonial-text-unit {
+      font-size: 16px;
+    }
+
+    #slogan-cloud .super-title {
+      font-size: 42px;
+      margin-top: 200px;
+    }
+
+    .elementor-element-0833653 {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .elementor-element-0833653 div {
+      max-width: 450px;
+    }
+
+    div#text-nuvem-mobile {
+      font-size: 14px;
+    }
+
+    .elementor-8
+      .elementor-element.elementor-element-6ffc14d
+      .elementor-button {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    .elementor-8 .elementor-element.elementor-element-69d7cb5 {
+      font-size: 12px;
+    }
+
+    div#business-pulse-text {
+      padding-bottom: 15px;
+      gap: 15px;
+    }
+
+    .elementor-8 .elementor-element.elementor-element-e1c867f {
+      --width: 67%;
+    }
+
+    .elementor-8 .elementor-element.elementor-element-462a26f {
+      --width: 33%;
+    }
+
+    .elementor-8
+      .elementor-element.elementor-element-5e74b59
+      .elementor-heading-title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 974px) {
+    #slogan-cloud .super-title {
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width: 898px) {
+    #slogan-cloud .super-title {
+      font-size: 34px;
+      margin-top: 230px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    #slogan-cloud .super-title {
+      font-size: 34px;
+      margin-top: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #slogan-cloud .super-title {
+      font-size: 28px;
+      margin-top: 270px;
+    }
+
+    #content-nuvem-losango-sombra {
+      margin-top: -185px;
+    }
+
+    .elementor-element-56037aa {
+      padding-top: 230px;
+    }
+  }
+
+  @media (max-width: 652px) {
+    #slogan-cloud .super-title {
+      font-size: 28px;
+      margin-top: 270px;
+    }
+
+    #content-nuvem-losango-sombra {
+      margin-top: -145px;
+    }
+  }
+
+  @media (max-width: 585px) {
+    #slogan-cloud .super-title {
+      font-size: 24px;
+      margin-top: 285px;
+      padding: 0 10px;
+    }
+
+    #content-nuvem-losango-sombra {
+      margin-top: -135px;
+    }
+
+    .elementor-8 .elementor-element.elementor-element-69d7cb5 {
+      text-align: center;
+    }
+
+    .elementor.elementor-8 {
+      padding-right: 0px;
+    }
+  }
+
+  @media (max-width: 481px) {
+    #content-nuvem-losango-sombra {
+      margin-top: -95px;
+    }
+
+    #slogan-cloud .super-title {
+      margin-top: 310px;
+      padding: 0 20px;
+    }
+
+    .elementor-element-56037aa {
+      padding-top: 270px;
+    }
+  }
+
+  @media (max-width: 389px) {
+    #content-nuvem-losango-sombra {
+      margin-top: -45px;
+    }
+
+    #slogan-cloud .super-title {
+      margin-top: 360px;
+      padding: 0 20px;
+    }
+
+    .elementor-element-56037aa {
+      padding-top: 330px;
+    }
+  }
+}

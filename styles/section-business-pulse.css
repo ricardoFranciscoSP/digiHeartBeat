@@ -104,10 +104,6 @@ div#business-pulse-content-image-woman {
     > .elementor-widget-container {
     margin: 15px 0px 0px 0px;
   }
-
-  img.attachment-full.size-full.wp-image-24 {
-    scale: 140%;
-  }
 }
 
 @media (min-width: 768px) {

@@ -277,48 +277,6 @@ img.attachment-full.size-full.wp-image-157 {
   z-index: 0;
 }
 
-@media (max-width: 1280px) {
-  .elementor-8 .elementor-element.elementor-element-9383a9a img {
-    z-index: 9999 !important;
-  }
-  img.attachment-full.size-full.wp-image-157 {
-    margin-top: -300px; /* Ajuste conforme necessário */
-    z-index: 1;
-  }
-}
-
-@media (max-width: 1366px) {
-  .elementor-8 .elementor-element.elementor-element-9383a9a img {
-    z-index: 9999 !important;
-  }
-  img.attachment-full.size-full.wp-image-157 {
-    margin-top: -300px; /* Ajuste conforme necessário */
-    z-index: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  img.attachment-full.size-full.wp-image-157 {
-    margin-top: -200px; /* Ajuste conforme necessário */
-  }
-}
-
-@media (max-width: 480px) {
-  img.attachment-full.size-full.wp-image-157 {
-    margin-top: -100px; /* Ajuste conforme necessário */
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) {
-  /* Estilos específicos para dispositivos Mac */
-  .elementor-8 .elementor-element.elementor-element-9383a9a img {
-    z-index: 9999 !important;
-  }
-  img.attachment-full.size-full.wp-image-157 {
-    margin-top: -250px; /* Ajuste conforme necessário */
-  }
-}
-
 /* Estilos imagem bloco connect nuvem */
 #losango-right-element {
   width: 480px !important;
@@ -390,64 +348,6 @@ img.attachment-medium_large.size-medium_large.wp-image-176 {
   width: 290px !important;
   margin-top: -70px;
   margin-left: 2px;
-}
-
-@media (max-width: 1968px) {
-  img.attachment-medium_large.size-medium_large.wp-image-176 {
-    width: 290px !important;
-    margin-top: -70px;
-    margin-left: 2px;
-  }
-
-  #content-nuvem-losango-sombra {
-    margin-top: -275px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #slogan-cloud .super-title {
-    font-size: 50px;
-    margin-top: 220px;
-  }
-
-  #text-nuvem-desktop {
-    margin-top: 80px;
-  }
-}
-
-@media (max-width: 1196px) {
-  img.attachment-medium_large.size-medium_large.wp-image-176 {
-    width: 48% !important;
-    margin-top: -70px;
-    margin-left: 2px;
-  }
-
-  /* #content-nuvem-losango-sombra {
-    margin-top: -320px;
-    position: relative;
-    overflow: hidden;
-  } */
-
-  #slogan-cloud .super-title {
-    font-size: 50px;
-    margin-top: 220px;
-  }
-}
-
-@media (max-width: 1024px) {
-  img.attachment-medium_large.size-medium_large.wp-image-176 {
-    width: 50% !important;
-    margin-top: -150px;
-    margin-right: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  img.attachment-medium_large.size-medium_large.wp-image-176 {
-    width: 70% !important;
-    margin-top: -100px;
-    margin-right: 50px;
-  }
 }
 
 span.ti-stars {
