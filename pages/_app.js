@@ -26,6 +26,33 @@ function MyApp({ Component, pageProps, id }) {
   return (
     <ApolloProvider client={client}>
       <IdProvider value={id}>
+        <style jsx global>{`
+          :root {
+            --base-url: ${process.env.NEXT_PUBLIC_BASE_URL};
+          }
+
+          #section-customer::before {
+            background-image: url(${process.env
+              .NEXT_PUBLIC_BASE_URL}/wp-content/uploads/2024/10/imagem2.png);
+            background-position: 100px 275px;
+            background-repeat: no-repeat;
+            background-size: 112% auto;
+            content: "";
+            position: absolute;
+            top: -130px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+          }
+
+          @media (max-width: 1200px) {
+            #section-customer::before {
+              background-position: 1300% 65%;
+            }
+          }
+        `}</style>
+
         {animationEnded ? (
           <Component {...pageProps} />
         ) : (

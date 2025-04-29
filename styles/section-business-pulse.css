@@ -15,11 +15,8 @@ div#business-pulse-text {
 @media screen and (min-width: 1280px) {
   div#business-pulse-text
     .elementor-element.elementor-element-69d7cb5.elementor-widget.elementor-widget-text-editor {
-    /* font-size: 20px;
-    line-height: 36px; */
-
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 
   div#business-pulse-text h2.elementor-heading-title.elementor-size-default {
@@ -108,10 +105,10 @@ div#business-pulse-content-image-woman {
 
 @media (min-width: 768px) {
   .elementor-8 .elementor-element.elementor-element-e1c867f {
-    --width: 63%;
+    --width: 67%;
   }
 
   .elementor-8 .elementor-element.elementor-element-462a26f {
-    --width: 37%;
+    --width: 32%;
   }
 }

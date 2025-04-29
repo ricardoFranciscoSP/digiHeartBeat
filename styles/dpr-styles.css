@@ -9,6 +9,17 @@
     --dpr-base: 1.5;
   }
 
+  .elementor-element.elementor-element-5e74b59.elementor-widget__width-inherit.elementor-widget.elementor-widget-heading {
+    margin-top: 40px;
+  }
+
+  /* Media query específica para largura máxima de 1246px com DPR >= 1.5 */
+  @media (max-width: 1246px) {
+    .card-text {
+      font-size: 0.9rem !important;
+    }
+  }
+
   /* Media query específica para largura máxima de 1024px com DPR >= 1.5 */
   @media (max-width: 1024px) {
     .elementor-element.elementor-arrows-position-outside
@@ -153,6 +164,10 @@
 
     .elementor-element-56037aa {
       padding-top: 230px;
+    }
+
+    .elementor-element.elementor-element-5e74b59.elementor-widget__width-inherit.elementor-widget.elementor-widget-heading {
+      margin-top: 0px;
     }
   }
 

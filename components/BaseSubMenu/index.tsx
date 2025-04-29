@@ -2,6 +2,7 @@ import { faArrowRight, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
+import config from "../../config";
 import styles from "./baseSubMenu.module.css";
 
 interface LinkColumn {
@@ -55,8 +56,22 @@ const BaseSubMenu: React.FC<BaseSubMenuProps> = ({
   return (
     <div className={styles.submenuContainer} ref={menuRef} data-open={isOpen}>
       <div className={styles.background}>
-        <div className={styles.diamond1} />
-        <div className={styles.diamond2} />
+        <div
+          className={styles.diamond1}
+          style={{
+            backgroundImage: `url(${config.getImageUrl(
+              "wp-content/uploads/2025/03/bold-verde.png"
+            )})`,
+          }}
+        />
+        <div
+          className={styles.diamond2}
+          style={{
+            backgroundImage: `url(${config.getImageUrl(
+              "wp-content/uploads/2025/03/cruzado-verde.png"
+            )})`,
+          }}
+        />
       </div>
 
       <div className={styles.content}>

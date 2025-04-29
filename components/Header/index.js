@@ -7,6 +7,7 @@ import { client } from "../../lib/apollo";
 import { GET_MENU } from "../../lib/queries";
 import styles from "./header.module.css";
 
+import SubMenuHowWeDoIt from "../SubMenuHowWeDoIt";
 import SubMenuWhatWeDo from "../SubMenuWhatWeDo";
 import SubMenuWhoWeAre from "../SubMenuWhoWeAre";
 
@@ -61,13 +62,21 @@ const Header = () => {
     setShowLanguageMenu(!showLanguageMenu);
   };
 
-  const handleMenuClick = (menuLabel) => {
+  const handleMenuClick = (menuLabel, e) => {
     if (
       menuLabel.toUpperCase() === "WHAT WE DO" ||
-      menuLabel.toUpperCase() === "WHO WE ARE"
+      menuLabel.toUpperCase() === "WHO WE ARE" ||
+      menuLabel.toUpperCase() === "HOW WE DO IT"
     ) {
-      setActiveSubmenu(activeSubmenu === menuLabel ? null : menuLabel);
+      if (e) {
+        e.preventDefault();
+      }
+      setActiveSubmenu(menuLabel);
     }
+  };
+
+  const handleMenuLeave = () => {
+    setActiveSubmenu(null);
   };
 
   return (
@@ -97,15 +106,9 @@ const Header = () => {
                         : ""
                     } ${activeSubmenu === menu.label ? styles.active : ""}`}
                     href={menu.url}
-                    onClick={(e) => {
-                      if (
-                        menu.label.toUpperCase() === "WHAT WE DO" ||
-                        menu.label.toUpperCase() === "WHO WE ARE"
-                      ) {
-                        e.preventDefault();
-                        handleMenuClick(menu.label);
-                      }
-                    }}
+                    onMouseEnter={() => handleMenuClick(menu.label)}
+                    onMouseLeave={handleMenuLeave}
+                    onClick={(e) => handleMenuClick(menu.label, e)}
                   >
                     {menu.label}
                   </Link>
@@ -221,10 +224,15 @@ const Header = () => {
             onClose={() => setActiveSubmenu(null)}
             isOpen={activeSubmenu.toUpperCase() === "WHAT WE DO"}
           />
-        ) : (
+        ) : activeSubmenu.toUpperCase() === "WHO WE ARE" ? (
           <SubMenuWhoWeAre
             onClose={() => setActiveSubmenu(null)}
             isOpen={activeSubmenu.toUpperCase() === "WHO WE ARE"}
+          />
+        ) : (
+          <SubMenuHowWeDoIt
+            onClose={() => setActiveSubmenu(null)}
+            isOpen={activeSubmenu.toUpperCase() === "HOW WE DO IT"}
           />
         ))}
     </header>

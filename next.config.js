@@ -1,9 +1,12 @@
 module.exports = {
+  env: {
+    NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+  },
   async rewrites() {
     return [
       {
         source: "/wp-content/uploads/:path*",
-        destination: "https://digi.maneiraweb.com.br/wp-content/uploads/:path*",
+        destination: `${process.env.NEXT_PUBLIC_BASE_URL}wp-content/uploads/:path*`,
       },
     ];
   },

@@ -104,10 +104,9 @@ export const elementorFrontendConfig = {
     "form-submissions": true,
   },
   urls: {
-    assets:
-      "https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/",
-    ajaxurl: "https://digi.maneiraweb.com.br/wp-admin/admin-ajax.php",
-    uploadUrl: "https://digi.maneiraweb.com.br/wp-content/uploads",
+    assets: `${process.env.NEXT_PUBLIC_BASE_URL}/wp-content/plugins/elementor/assets/`,
+    ajaxurl: `${process.env.NEXT_PUBLIC_BASE_URL}/wp-admin/admin-ajax.php`,
+    uploadUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/wp-content/uploads`,
   },
   nonces: {
     floatingButtonsClickTracking: "2265ee2489",

@@ -1,3 +1,15 @@
+img.attachment-full.size-full.wp-image-24 {
+  max-width: 115%;
+  width: 115%;
+}
+
+.destaque {
+  color: #b30404;
+  -webkit-text-stroke: 0.1px black;
+  text-shadow: -0.4px -0.4px 0 #000, 0.4px -0.4px 0 #000, -0.4px 0.4px 0 #000,
+    0.4px 0.4px 0 #000;
+}
+
 @media (max-width: 1280px) {
   .elementor-8 .elementor-element.elementor-element-9383a9a img {
     z-index: 9999 !important;
@@ -54,6 +66,28 @@
 
   #text-nuvem-desktop {
     margin-top: 80px;
+  }
+}
+
+@media (max-width: 1246px) {
+  .card-text {
+    font-size: 0.9rem !important;
+  }
+
+  #section-customer span.blackText {
+    font-size: 32px;
+  }
+
+  #section-customer span.redText {
+    font-size: 28px;
+  }
+
+  #section-customer span.grayText {
+    font-size: 68px;
+  }
+
+  #section-customer .comercial-data span.grayText {
+    margin-bottom: -5px;
   }
 }
 
@@ -142,6 +176,48 @@
 
   .footer {
     padding: 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .card-text {
+    font-size: 0.8rem !important;
+  }
+
+  #section-customer .btnSeeMore-cards .elementor-button-link {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  #section-customer .cardCustom {
+    height: min-content;
+  }
+}
+
+@media (max-width: 980px) {
+  #section-customer .e-con-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  #section-customer .e-con-inner .cardCustom {
+    width: 100%;
+  }
+
+  #section-customer .e-con-inner #card3 {
+    margin-top: 0px;
+  }
+  #section-customer .e-con-inner #card3.fade-in-up {
+    transform: translateY(0px) !important;
+  }
+
+  #section-customer .e-con-inner #card4 {
+    margin-top: 160px;
+  }
+  #section-customer .e-con-inner #card4.fade-in-up {
+    transform: translateY(70px) !important;
   }
 }
 
@@ -283,6 +359,28 @@
   }
 }
 
+@media (max-width: 690px) {
+  #section-customer {
+    height: auto !important;
+  }
+
+  #section-customer .e-con-inner {
+    grid-template-columns: 1fr;
+    padding: 70px 70px 0px 70px !important;
+  }
+
+  #section-customer .e-con-inner #card1.fade-in-up,
+  #section-customer .e-con-inner #card2.fade-in-up,
+  #section-customer .e-con-inner #card3.fade-in-up,
+  #section-customer .e-con-inner #card4.fade-in-up {
+    transform: translateY(0px) !important;
+    margin-top: 0px !important;
+  }
+
+  #section-customer {
+  }
+}
+
 @media (max-width: 652px) {
   #slogan-cloud .super-title {
     margin-top: 290px;
@@ -313,10 +411,9 @@
 
   .destaque {
     color: #b30404;
-    -webkit-text-stroke: 0.2px black; /* Reduzido de 0.3px para 0.2px */
-    text-shadow: -0.5px -0.5px 0 #000,
-      /* Reduzido de 1px para 0.5px */ 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000,
-      0.5px 0.5px 0 #000;
+    -webkit-text-stroke: 0.1px black;
+    text-shadow: -0.3px -0.3px 0 #000, 0.3px -0.3px 0 #000, -0.3px 0.3px 0 #000,
+      0.3px 0.3px 0 #000;
   }
 
   .elementor-element-0833653 {
@@ -352,5 +449,9 @@
 
   .elementor-element-56037aa {
     padding-top: 350px;
+  }
+
+  #section-customer .e-con-inner {
+    padding: 70px 20px 0px 20px !important;
   }
 }
