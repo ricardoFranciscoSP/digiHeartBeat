@@ -79,8 +79,7 @@ const useLoadCarouselScripts = () => {
           },
         },
         urls: {
-          assets:
-            "https://digi.maneiraweb.com.br/wp-content/plugins/elementor/assets/",
+          assets: `${process.env.NEXT_PUBLIC_BASE_URL}/wp-content/plugins/elementor/assets/`,
         },
         settings: {
           page: [],

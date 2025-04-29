@@ -1,63 +1,89 @@
 import React from "react";
 import BaseSubMenu from "../BaseSubMenu";
 
-interface SubMenuHowWeDoItProps {
+interface SubMenuWhatWeDoProps {
   onClose: () => void;
   isOpen: boolean;
 }
 
-const SubMenuHowWeDoIt: React.FC<SubMenuHowWeDoItProps> = ({
+const SubMenuWhatWeDo: React.FC<SubMenuWhatWeDoProps> = ({
   onClose,
   isOpen,
 }) => {
   const mockData = {
-    title: "How We Do It",
+    title: "What We Do",
     mainText:
-      "Nossa abordagem combina expertise técnica com metodologias ágeis para entregar soluções inovadoras e resultados mensuráveis.",
+      "We craft tailored end-to-end strategies that combine business insight with cutting-edge technology to solve challenges, boost operational efficiency, and unlock growth across the entire costumer journey.",
 
     middleColumn: {
-      title: "Nossa Abordagem",
+      title: "Capabilities",
       splitIntoColumns: true,
-      splitAt: 3,
+      splitAt: 4, // divide após o 4º item
       links: [
         {
-          text: "Metodologia",
-          url: "/how-we-do-it/approach",
+          text: "Customer Strategy",
+          url: "/services/digital-transformation",
         },
-        {
-          text: "Processo",
-          url: "/how-we-do-it/process",
-          hasArrow: true,
-        },
-        {
-          text: "Tecnologia",
-          url: "/how-we-do-it/technology",
-          hasArrow: true,
-        },
+        { text: "Scales", url: "/services/cloud", hasArrow: true },
+        { text: "Marketing", url: "/services/custom-software", hasArrow: true },
+        { text: "Business Growth", url: "/services/mobile", hasArrow: true },
+        { text: "Digital Products", url: "/services/design" },
+        { text: "Data & AI", url: "/services/design", hasArrow: true },
+        { text: "Technology", url: "/services/design", hasArrow: true },
       ],
     },
     rightColumn: [
       {
         type: "links" as const,
         content: {
-          title: "Nossos Serviços",
+          title: "Industries",
           links: [
             {
-              text: "Consultoria",
-              url: "/how-we-do-it/consulting",
+              text: "Concumer & Retail",
+              url: "/industries/healthcare",
               isBold: true,
             },
             {
-              text: "Implementação",
-              url: "/how-we-do-it/implementation",
+              text: "Financial Services",
+              url: "/industries/healthcare",
               hasArrow: true,
               isBold: true,
             },
             {
-              text: "Suporte",
-              url: "/how-we-do-it/support",
+              text: "Energy & Commodities",
+              url: "/industries/healthcare",
               hasArrow: true,
             },
+            {
+              text: "Healthcare & Life Sciences",
+              url: "/industries/healthcare",
+              hasArrow: true,
+              isBold: true,
+            },
+            { text: "Education", url: "/industries/healthcare", isBold: true },
+            {
+              text: "Media & Entertainment",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            {
+              text: "Telecommunications",
+              url: "/industries/healthcare",
+              hasArrow: true,
+            },
+            {
+              text: "Software and Platforms",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            { text: "Public Sector", url: "/industries/healthcare" },
+            {
+              text: "Legal Services",
+              url: "/industries/healthcare",
+              isBold: true,
+            },
+            { text: "Human Capital", url: "/industries/finance", isBold: true },
+            { text: "Travel & Hospitality", url: "/industries/retail" },
           ],
         },
       },
@@ -65,9 +91,9 @@ const SubMenuHowWeDoIt: React.FC<SubMenuHowWeDoItProps> = ({
         type: "image" as const,
         content: {
           image: "/assets/what-we-do-illustration.jpg",
-          title: "Nossa Metodologia",
+          title: "Customer strategy",
           description:
-            "Combinamos expertise técnica com metodologias ágeis para entregar resultados excepcionais",
+            "We measure your business performance or the potential of your idea",
         },
       },
     ],
@@ -85,4 +111,4 @@ const SubMenuHowWeDoIt: React.FC<SubMenuHowWeDoItProps> = ({
   );
 };
 
-export default SubMenuHowWeDoIt;
+export default SubMenuWhatWeDo;
